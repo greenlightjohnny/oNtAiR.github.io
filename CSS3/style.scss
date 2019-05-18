@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Karla|Lemon|Montserrat|Rubik|Tangerine');
+
+
+
+
+
+$screen-tablet: 550px;
+$screen-tablet-large: 811px;
+$screen-desktop: 1201px;
+$screen-desktop-large: 1300px;
+
+@mixin tablet {
+    @media(min-width: #{$screen-tablet}) {
+        @content;
+    }
+}
+
+@mixin tabletLarge {
+    @media(min-width: #{$screen-tablet-large}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width: #{$screen-desktop}) {
+        @content;
+    }
+}
+@mixin sectionHeading {
+    text-align: center;
+    
+    text-transform: uppercase;
+    font-family: 'rubik';
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+@mixin paragraphPadding {
+    padding: 5px 15px 30px 15px;
+}
+
+@mixin subHeading {
+    text-align: center;
+    font-size: 2rem;
+}
+
+$offwhite: #f4f4f4;
+$offblack: #242424;
+$offwhitetwo: #fdfdfd;
+$offwhitethree: #f9f9f9;
+
+/******pic colors ******/
+$picblue: #4886d9;
+$picgreen: #1ca658;
+$picyellow: #f2e852;
+$picorange: #d97218;
+$picred: #d9320d;
+
+$comppurple: #9490f4;
+$compgrey: #7B8C68;
+$compgreen: #7BBF2E;
+
+$compblue: #23a1a6;
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background: $offwhitethree;
+    font-family: 'montserrat';
+}
+
+
+
+header {
+    height: 100vh;
+    width: 100%;
+    background: url(/IMG/art50-min.jpg);
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed;
+    
+    img {
+        display: inline-block;
+    }
+
+    .opacityAnchor {
+        position: relative;
+        top: 40%;
+    }
+
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        color: $offwhite;
+        font-family: 'tangerine';
+        font-size: 4rem;
+        position: relative;
+        top: 30%;
+
+        @include tablet {
+            font-size: 6rem;
+        }
+        @include tabletLarge {
+            font-size: 8rem;
+        }
+
+       
+    }
+}
+
+
+.anchor {
+    display: block;
+    height: 2rem;
+    margin-top: -2rem;
+    visibility: hidden;
+}
+
+/**************************************************************************
+*********************** MAIN **********************************************/
+.anch {
+    visibility: hidden;
+}
+#mainNav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    
+    align-items: center;
+    background: #fff;
+    z-index: 2;
+    transition: all ease 1s;
+
+    .logo {
+        margin: 1rem 0 1rem 10%;
+        
+        
+
+        img {
+            position: center;
+            width: 50px;
+            height: auto;
+            color: #4886d9;
+            
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin-right: 10%;
+        display: none;
+        @include tabletLarge {
+            display: inline-block;
+        }
+        
+    
+        
+        a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $offblack;
+            
+        }
+
+        a:hover {
+            color: #4886d9;
+        }
+    }
+
+    li {
+        
+        display: inline-block;
+        margin-left: 1rem;
+    }
+
+    
+
+    .ham {
+        margin: 1rem 10% 1rem 0;
+        font-size: 2rem;
+        @include tabletLarge {
+            display: none;
+        }
+
+        a {
+            color: $offblack;
+        }
+        
+        .fa-times {
+            color: red;
+        }
+    }
+}
+
+.mobileNav {
+    z-index: 3;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all ease 0.5s;
+    
+
+    ul {
+        list-style-type: none;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    li {
+        color: $offwhite;
+        margin-top: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $offwhite;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.slideX {
+    position: absolute;
+    top: 1rem;
+    left: 88%;
+
+    color: red;
+    font-size: 3rem;
+    
+}
+
+
+
+.slideIn {
+    transform: translateX(0) !important;
+}
+
+
+.close {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
+
+
+
+.stickyNav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+  box-shadow: 0px 1px 10px #999;
+}
+
+.blurBackground {
+    background: rgba(255, 255, 255, .9);
+}
+.whiteStandout {
+    color: #fff;
+}
+/**************************************************************************
+*********************** ARTICLES *****************************************/
+
+
+.articles {
+    padding-bottom: 4rem;
+    background: linear-gradient(#fff, $offwhitethree);
+    
+    #tt {
+        @include sectionHeading;
+        .fas {
+            color:#4886d9;
+        }
+    }
+
+    h3 {
+        @include paragraphPadding;
+    }
+}
+
+/***************************** CODE FROM https://github.com/web-tiki/responsive-grid-of-hexagons *****************/
+.hexflex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+.hexagon {
+    visibility: hidden;
+    
+    
+    position: relative;
+    outline: 1px solid transparent;
+   
+}
+
+.hexagon::after {
+    content: '';
+    display: block;
+    padding-bottom: 86.602%;
+}
+
+.hexIn {
+    position: absolute;
+    width: 96%;
+    margin: 0 2%;
+    padding-bottom: 110.851%;
+    overflow: hidden;
+    outline: 1px solid transparent;
+    visibility: hidden;
+    
+    outline: 1px solid transparent;
+    transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+    transition: all 0.5s
+}
+
+.hexIn * {
+    position: absolute;
+    visibility: visible;
+    outline: 1px solid transparent;
+}
+
+.hexLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    color: $offwhite;
+    overflow: hidden;
+    transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+}
+
+
+.hexagon img {
+    left: -100%;
+    right: -100%;
+    width: auto;
+    margin: 0 auto;
+    height: 100%;
+    transform: rotate3d(0, 0, 0, 0deg);
+}
+
+.hexagon h1, .hexagon p {
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+    background-color: rgba(111, 102, 241, 0.8);
+    transition: transform .2s ease-out, opacity .3s ease-out;
+}
+
+.hexagon h1 {
+    color: $compblue;
+    bottom: 50%;
+    padding-top: 50%;
+
+    z-index: 1;
+    transform: translate3d(0, -100%, 0);
+}
+
+.hexagon p {
+    top: 50%;
+    padding-bottom: 50%;
+    text-transform: uppercase;
+    
+    transform: translate3d(0, 100%, 0)
+}
+
+   .hexagon h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 10%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+
+
+
+
+.hexLink:hover h1, .hexLink:focus h1,
+.hexLink:hover p, .hexLink:focus p {
+
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+@media (min-width:1201px) { 
+    .hexflex {
+      padding-bottom: 4.4%
+    }
+    .hexagon {
+      width: 20%; 
+    }
+    .hexagon:nth-child(9n+6){ 
+      margin-left:10%;
+    }
+  }
+  
+  @media (max-width: 1200px) and (min-width:901px) { 
+    .hexflex{
+      padding-bottom: 5.5%
+    }
+    .hexagon {
+      width: 25%; 
+    }
+    .hexagon:nth-child(7n+5){ 
+      margin-left:12.5%;  
+    }
+  }
+  
+  @media (max-width: 900px) and (min-width:601px) { 
+    .hexflex{
+      padding-bottom: 7.4%
+    }
+    .hexagon {
+      width: 33.333%; 
+    }
+    .hexagon:nth-child(5n+4){ 
+      margin-left:16.666%;  
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .hexflex{
+      padding-bottom: 11.2%
+    }
+    .hexagon {
+      width: 50%; 
+    }
+    .hexagon:nth-child(3n+3){ 
+      margin-left:25%;  
+    }
+  }
+  
+  @media (max-width: 400px) {
+      .hexflex {
+          font-size: 13px;
+      }
+  }
+
+/**************************************************************************
+*********************** ABOUT *****************************************/
+
+
+.about {
+    background: #fdfdfd ;
+    
+    
+
+    h2 {
+        color: $offblack;
+        @include sectionHeading;
+    }
+
+    p {
+        line-height: 1.7rem;
+        color: $offblack;
+        @include paragraphPadding;
+    }
+
+    h3 {
+        padding-top: 1rem;
+        @include subHeading;
+        color: $offblack;
+       
+    }
+    .fas  {
+        color: #4886d9;
+    }
+
+    article {
+
+        div {
+
+            @include tabletLarge {
+            z-index: 1;
+            background: #fff;
+            margin: 1rem;
+            margin-bottom: -7rem;
+            border-radius: 9px;
+            box-shadow:  0 3px 10px rgba(50,50,50,0.05);
+           /* box-shadow: 0px 6px 10px #000000; */
+            }
+        }
+        @include tablet {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @include tabletLarge {
+            display: flex;
+            flex: 1;
+
+        }
+
+    }
+}
+
+/**************************************************************************
+*********************** STORE *****************************************/
+
+.store {
+    background: #272b2e;
+    padding-bottom: 4rem;
+
+
+
+
+    @include tabletLarge {
+        padding-top: 7rem;
+    }
+
+    .storeTop {
+
+
+        @include tablet {
+            width: 90%;
+            margin: 0 auto;
+
+            p {
+                
+                width: 50%;
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow:  0 3px 10px rgba(50,50,50,0.05);
+                padding-top: 1rem;
+                margin-top: 1rem;
+                
+                
+                
+
+            }
+        }
+    }
+    
+    h2 {
+        @include sectionHeading;
+        color: $offwhite;
+        padding-bottom: .5rem;
+        .fas {
+            color: #4886d9;
+        }
+    }
+
+    h3 {
+        @include subHeading;
+        color: $offwhite;
+        font-size: 1.8rem;
+        .some {
+            font-size: 1.3rem;
+            letter-spacing: .1rem;
+        }
+    }
+
+    p {
+        color: $offwhite;
+        line-height: 1.7rem;
+        @include paragraphPadding;
+    }
+}
+
+
+
+/**************************************************************************
+*********************** Contact *****************************************/
+
+.contact {
+    background: $offblack;
+    color: $offwhite;
+    .padding {
+        padding: 0 15px 0 15px;
+    }
+
+    .contactFlex {
+        @include tabletLarge {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex: 1;
+        }
+
+        @include desktop {
+            width: 80%;
+        }
+    }
+
+    .contactTop {
+
+        .phone {
+            color: #4886d9;
+            font-size: 2rem;
+        }
+
+        a:hover {
+            color: #4886d9;
+        }
+        
+        @include tablet {
+            width: 90%;
+            
+            margin:0 auto;
+        }
+        @include tabletLarge {
+            margin: 0 2rem 0 2rem;
+        }
+
+        @include desktop {
+            margin: 0 5%;
+        }
+    }
+    .form {
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @include tabletLarge {
+            
+            margin: 0 2rem 0 2rem;
+        }
+
+        @include desktop {
+            margin: 0 5%;
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $offwhite
+    }
+    #contactform {
+        padding-bottom: 3rem;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 5%;
+        border-radius: 7px;
+        font-size: 2rem;
+        border-style: outset;
+        font-family: 'montserrat';
+    }
+
+    #button {
+        background: rgb(213, 245, 71);
+        border: none;
+        border-radius: 20px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 0;
+        cursor: pointer;
+        
+        
+
+        @include tablet {
+            width: 12rem;
+        }
+
+        #button:hover {
+            cursor: pointer;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        margin-bottom: 5%;
+        font-size: 2rem;
+        border-radius: 10px;
+        min-height: 5rem;
+    }
+
+    h2 {
+        @include sectionHeading;
+        .fas {
+        color: #4886d9;
+
+        }
+    }
+
+    p {
+        line-height: 1.7rem;
+        @include paragraphPadding();
+        
+    }
+}
+
+/**************************************************************************
+*********************** Footer *****************************************/
+
+footer {
+
+        background-color: #353839;
+        color: $offwhite;
+        
+        div {
+            width: 90%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            text-align: center;
+        }
+}
+
