@@ -1,10 +1,16 @@
 
 
 body {
-    background: linear-gradient(rgb(233, 70, 70) to #fff);
+    background: linear-gradient(rgb(241, 77, 77) to rgb(133, 19, 240));
 
     height: 100vh;
-    width: 100%
+    width: 100%;
+    box-sizing: border-box;
+}
+
+div {
+    width: 100%;
+    margin: 0 auto;
 }
 
 a {
@@ -14,6 +20,6 @@ a {
     color: #242424;
     text-align: center;
     width: 100%;
-    margin: 50% auto auto 50%;
+    margin-top: 5%;
 }
 
