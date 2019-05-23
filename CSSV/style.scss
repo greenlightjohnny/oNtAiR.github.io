@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css?family=Karla|Paprika|Rubik&display=swap');
+
+
+$offwhite: #f4f4f4;
+$offblack: #242424;
+$golden: #F2D479;
+$bluel: #07b2d9;
+$blue2 : #0777D9;
+$logored: #F25C69;
+
+
+@mixin heading {
+    font-family: 'rubik';
+}
+
+@mixin phone {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+html, body {
+    box-sizing: border-box;
+    font-family: 'karla';
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+}
+
+.mobileNav {
+    z-index: 3;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all ease 0.5s;
+    
+
+    ul {
+        list-style-type: none;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    li {
+        color: $offwhite;
+        margin-top: 2rem;
+
+        a {
+            text-decoration: none;
+            color: $offwhite;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+    
+}
+
+.slideIn {
+    transform: translateX(0) !important;
+}
+
+.slideX {
+    position: absolute;
+    top: .3rem;
+    left: 88%;
+    a {
+    color: red;
+    font-size: 2.5rem;
+    }
+}
+
+
+.topnav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    background: transparent;
+    flex: 1;
+    justify-content: space-between;
+    position: fixed;
+    transition: all ease 2s;
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+
+    @include tablet-portrait {
+    
+    }
+
+    .menuOpen {
+        font-size: 2.5rem;
+        padding-top: .5rem;
+        padding-right: 2rem;
+        
+        a {
+            color: #242424;
+        }
+        @include tablet-landscape {
+            display: none;
+        }
+    }
+
+
+    .navlogo {
+        margin-left: 10%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        height: 7rem;
+        width: auto;
+        transition: all ease .5s;
+        
+
+        img {
+            object-fit: contain;
+            height: 100%;
+        }
+
+        p {
+            display: inline-block;
+            outline: 1px solid blue;
+            padding-bottom: 1rem;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding-top: 1rem;
+        margin-right: 10%;
+        display: none;
+
+        a {
+            text-decoration: none;
+            color: $offblack;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        @include tablet-landscape() {
+            display: block
+        }
+    }
+
+    li {
+        display: inline;
+        margin-left: 1rem;
+    }
+
+    
+
+    .shrink {
+        height: 4rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    
+}
+.navbg {
+    background: #f4f4f4;
+    box-shadow: 0px 1px 10px #999;
+}
+
+header {
+    background-image: url('/IMG/Sofa-So-Good-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+
+    
+
+    .title {
+        
+        position: relative;
+        left: 10%;
+        width: 27rem;;
+        padding-top: 20%;
+        color: $golden;
+
+        @include phone {
+            padding-top: 50%;
+            width: 100%;
+            left: 0;
+        }
+        
+
+        h1 {
+            @include heading;
+            font-size: 2.3rem;
+            
+            padding: 1rem 1rem 3rem 1rem;
+            background: $blue2;
+            @include phone {
+                font-size: 1.9rem;
+                text-align: center;
+            }
+        }
+
+        h3 {
+            background: $logored;
+            padding: 1rem;
+            text-align: right;
+            position: relative;
+            
+            margin-right: -3rem;
+            margin-left: 3rem;
+            margin-top: -1rem;
+            ul {
+                list-style-type: none;
+                display: inline;
+
+                li {
+                    display: inline;
+                }
+            }
+
+            @include phone {
+                margin-left: 1rem;
+                text-align: left;
+                width: fit-content;
+                margin: -2rem auto 0 auto;
+
+                ul {
+                    li {
+                        display: block;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/// MAIN ///////////////////
+
+/////////////////////// FURNITURE ///////////////////
+
+.furnishings {
+    
+    background: #f2f2f2;
+    padding-top: 3rem;
+
+
+    h2 {
+        text-align: center;
+        font-family: 'rubik';
+        padding-bottom: .5rem;
+        color: #242424;
+        font-size: 2rem;
+    }
+    
+    p {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #f4f4f4;
+    }
+
+    .chairs {
+        width: 80%;
+       margin: 0 auto;
+        
+        position: relative;
+        height: 35rem;
+        p {
+            padding: 1rem;
+        }
+    }
+
+    .left {
+        
+        position: absolute;
+        width: 20rem;
+        color: #fff;
+        text-align: left;
+        background: #111111;
+        margin-left: -2rem;
+        margin-top: 2rem;
+        
+
+        p {
+            text-align: left;
+        }
+        
+
+    }
+
+    .leftt {
+        position: absolute;
+        width: 20rem;
+        color: #fff;
+        text-align: left;
+        background: #111111;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 2rem;
+        z-index: 3;
+        p {
+            text-align: left;
+        }
+    }
+
+    .right {
+        
+        margin: 0 auto;
+        
+        background: url('/IMG/26f83c37273261.573af25f5d4e4.jpg');
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        height: 100%;
+        width: 90%;
+        
+        
+    }
+    
+}
+
+
+////////////////////
+
+.hanging {
+    height: 40vh;
+    background: rgb(8, 8, 8);
+
+    .wallpic {
+        width: auto;
+        background-image: url('/IMG/removedbg.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        height: 50rem;
+    }
+}
+
+
+footer {
+    background: #242424;
+    color: #aaa;
+    height: 10rem;
+
+    .social {
+        font-size: 2.5rem;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: perspective(1px) translateY(-50%);
+    }
+}

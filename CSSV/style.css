@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css?family=Karla|Paprika|Rubik&display=swap");
+html, body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'karla';
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.mobileNav {
+  z-index: 3;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.mobileNav ul {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.mobileNav li {
+  color: #f4f4f4;
+  margin-top: 2rem;
+}
+
+.mobileNav li a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.slideIn {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+
+.slideX {
+  position: absolute;
+  top: .3rem;
+  left: 88%;
+}
+
+.slideX a {
+  color: red;
+  font-size: 2.5rem;
+}
+
+.topnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  background: transparent;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  -webkit-transition: all ease 2s;
+  transition: all ease 2s;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+}
+
+.topnav .menuOpen {
+  font-size: 2.5rem;
+  padding-top: .5rem;
+  padding-right: 2rem;
+}
+
+.topnav .menuOpen a {
+  color: #242424;
+}
+
+@media (min-width: 900px) {
+  .topnav .menuOpen {
+    display: none;
+  }
+}
+
+.topnav .navlogo {
+  margin-left: 10%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 7rem;
+  width: auto;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.topnav .navlogo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+
+.topnav .navlogo p {
+  display: inline-block;
+  outline: 1px solid blue;
+  padding-bottom: 1rem;
+}
+
+.topnav ul {
+  list-style-type: none;
+  padding-top: 1rem;
+  margin-right: 10%;
+  display: none;
+}
+
+.topnav ul a {
+  text-decoration: none;
+  color: #242424;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 900px) {
+  .topnav ul {
+    display: block;
+  }
+}
+
+.topnav li {
+  display: inline;
+  margin-left: 1rem;
+}
+
+.topnav .shrink {
+  height: 4rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.navbg {
+  background: #f4f4f4;
+  -webkit-box-shadow: 0px 1px 10px #999;
+          box-shadow: 0px 1px 10px #999;
+}
+
+header {
+  background-image: url("/IMG/Sofa-So-Good-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+header .title {
+  position: relative;
+  left: 10%;
+  width: 27rem;
+  padding-top: 20%;
+  color: #F2D479;
+}
+
+@media (max-width: 599px) {
+  header .title {
+    padding-top: 50%;
+    width: 100%;
+    left: 0;
+  }
+}
+
+header .title h1 {
+  font-family: 'rubik';
+  font-size: 2.3rem;
+  padding: 1rem 1rem 3rem 1rem;
+  background: #0777D9;
+}
+
+@media (max-width: 599px) {
+  header .title h1 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+}
+
+header .title h3 {
+  background: #F25C69;
+  padding: 1rem;
+  text-align: right;
+  position: relative;
+  margin-right: -3rem;
+  margin-left: 3rem;
+  margin-top: -1rem;
+}
+
+header .title h3 ul {
+  list-style-type: none;
+  display: inline;
+}
+
+header .title h3 ul li {
+  display: inline;
+}
+
+@media (max-width: 599px) {
+  header .title h3 {
+    margin-left: 1rem;
+    text-align: left;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: -2rem auto 0 auto;
+  }
+  header .title h3 ul li {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.furnishings {
+  background: #f2f2f2;
+  padding-top: 3rem;
+}
+
+.furnishings h2 {
+  text-align: center;
+  font-family: 'rubik';
+  padding-bottom: .5rem;
+  color: #242424;
+  font-size: 2rem;
+}
+
+.furnishings p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #f4f4f4;
+}
+
+.furnishings .chairs {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  height: 35rem;
+}
+
+.furnishings .chairs p {
+  padding: 1rem;
+}
+
+.furnishings .left {
+  position: absolute;
+  width: 20rem;
+  color: #fff;
+  text-align: left;
+  background: #111111;
+  margin-left: -2rem;
+  margin-top: 2rem;
+}
+
+.furnishings .left p {
+  text-align: left;
+}
+
+.furnishings .leftt {
+  position: absolute;
+  width: 20rem;
+  color: #fff;
+  text-align: left;
+  background: #111111;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2rem;
+  z-index: 3;
+}
+
+.furnishings .leftt p {
+  text-align: left;
+}
+
+.furnishings .right {
+  margin: 0 auto;
+  background: url("/IMG/26f83c37273261.573af25f5d4e4.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 90%;
+}
+
+.hanging {
+  height: 40vh;
+  background: #080808;
+}
+
+.hanging .wallpic {
+  width: auto;
+  background-image: url("/IMG/removedbg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 50rem;
+}
+
+footer {
+  background: #242424;
+  color: #aaa;
+  height: 10rem;
+}
+
+footer .social {
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: perspective(1px) translateY(-50%);
+          transform: perspective(1px) translateY(-50%);
+}
+/*# sourceMappingURL=style.css.map */
