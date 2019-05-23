@@ -93,7 +93,7 @@ html, body {
 }
 
 .topnav .menuOpen a {
-  color: #242424;
+  color: #f4f4f4;
 }
 
 @media (min-width: 900px) {
@@ -157,8 +157,6 @@ html, body {
 
 .navbg {
   background: #24242481;
-  -webkit-box-shadow: 0px 1px 10px #999;
-          box-shadow: 0px 1px 10px #999;
 }
 
 header {
