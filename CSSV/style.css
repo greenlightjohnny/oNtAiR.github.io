@@ -133,7 +133,7 @@ html, body {
 
 .topnav ul a {
   text-decoration: none;
-  color: #242424;
+  color: #f4f4f4;
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -156,7 +156,7 @@ html, body {
 }
 
 .navbg {
-  background: #f4f4f4;
+  background: #24242481;
   -webkit-box-shadow: 0px 1px 10px #999;
           box-shadow: 0px 1px 10px #999;
 }
@@ -426,7 +426,7 @@ header .title h3 ul li {
 }
 
 .hanging .card__image--record {
-  background-image: url("/IMG/lights2.jpg");
+  background-image: url("/IMG/Air.jpg");
 }
 
 .hanging .card__image--air {
