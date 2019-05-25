@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Karla|Paprika|Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Karla|Paprika|Rubik&display=swap");
 html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -15,6 +15,10 @@ html, body {
 * {
   padding: 0;
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .mobileNav {
@@ -47,6 +51,7 @@ html, body {
   color: #f4f4f4;
   font-size: 2rem;
   font-weight: bold;
+  letter-spacing: 1.9px;
 }
 
 .slideIn {
@@ -94,6 +99,11 @@ html, body {
 
 .topnav .menuOpen a {
   color: #f4f4f4;
+  letter-spacing: 1.9px;
+}
+
+.topnav .menuOpen a:hover {
+  color: #F25C69;
 }
 
 @media (min-width: 900px) {
@@ -134,8 +144,15 @@ html, body {
 .topnav ul a {
   text-decoration: none;
   color: #f4f4f4;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 1.2rem;
+  letter-spacing: 1.9px;
+  font-family: 'karla';
+}
+
+.topnav ul a:hover {
+  color: #F25C69;
+  font-weight: bold;
 }
 
 @media (min-width: 900px) {
@@ -160,7 +177,7 @@ html, body {
 }
 
 header {
-  background-image: url("/IMG/herobg.jpg");
+  background-image: url("/IMG/bg3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -169,19 +186,20 @@ header {
 }
 
 header .title {
-  color: #fff;
+  color: #111;
   width: 100%;
   margin: 0 auto;
   position: relative;
   text-align: center;
   top: 30%;
-  font-family: 'rubik';
+  font-family: 'Fredericka The Great';
 }
 
 header .title h1 {
   font-size: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-weight: 300;
 }
 
 @media (min-width: 600px) {
@@ -201,81 +219,28 @@ header .title h2 {
   }
 }
 
-.furnishings {
-  background: #f2f2f2;
+.short .shortCenter {
+  width: 100%;
+  margin: 0 auto;
   padding-top: 3rem;
 }
 
-.furnishings h2 {
+.short h2 {
+  font-size: 3rem;
   text-align: center;
+  padding-bottom: .8rem;
   font-family: 'rubik';
-  padding-bottom: .5rem;
-  color: #242424;
-  font-size: 2rem;
 }
 
-.furnishings p {
+.short p {
+  width: 300px;
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #f4f4f4;
-}
-
-.furnishings .chairs {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-  height: 35rem;
-}
-
-.furnishings .chairs p {
-  padding: 1rem;
-}
-
-.furnishings .left {
-  position: absolute;
-  width: 20rem;
-  color: #fff;
-  text-align: left;
-  background: #111111;
-  margin-left: -2rem;
-  margin-top: 2rem;
-}
-
-.furnishings .left p {
-  text-align: left;
-}
-
-.furnishings .leftt {
-  position: absolute;
-  width: 20rem;
-  color: #fff;
-  text-align: left;
-  background: #111111;
-  bottom: 0;
-  right: 0;
-  margin-bottom: 2rem;
-  z-index: 3;
-}
-
-.furnishings .leftt p {
-  text-align: left;
-}
-
-.furnishings .right {
-  margin: 0 auto;
-  background: url("/IMG/26f83c37273261.573af25f5d4e4.jpg");
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 90%;
 }
 
 .hanging {
   padding-bottom: 4rem;
-  padding-top: 4rem;
+  padding-top: 1rem;
 }
 
 .hanging img {

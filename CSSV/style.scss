@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Karla|Paprika|Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Karla|Paprika|Rubik&display=swap');
+
 
 
 $offwhite: #f4f4f4;
@@ -51,9 +52,8 @@ html, body {
     padding: 0;
     margin: 0;
 }
-
-body {
-
+html {
+    scroll-behavior: smooth;
 }
 
 .mobileNav {
@@ -83,6 +83,7 @@ body {
             color: $offwhite;
             font-size: 2rem;
             font-weight: bold;
+            letter-spacing: 1.9px;
         }
     }
 
@@ -128,6 +129,11 @@ body {
         
         a {
             color: $offwhite;
+            letter-spacing: 1.9px;
+        }
+
+        a:hover {
+            color: $logored;
         }
         @include tablet-landscape {
             display: none;
@@ -168,8 +174,15 @@ body {
         a {
             text-decoration: none;
             color: $offwhite;
-            font-weight: bold;
+            font-weight: 300;
             font-size: 1.2rem;
+            letter-spacing: 1.9px;
+            font-family: 'karla';
+        }
+
+        a:hover {
+            color: $logored;
+            font-weight: bold;
         }
         @include tablet-landscape() {
             display: block
@@ -197,7 +210,7 @@ body {
 }
 
 header {
-    background-image: url('/IMG/herobg.jpg');
+    background-image: url('/IMG/bg3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -208,18 +221,19 @@ header {
 
     .title {
         
-        color: #fff;
+        color: #111;
         width: 100%;
         margin: 0 auto;
         position: relative;
         text-align: center;
         top: 30%;
-        font-family: 'rubik';
+        font-family: 'Fredericka The Great';
 
         h1 {
             font-size: 2rem;
             padding-top: 1rem;
             padding-bottom: 1rem;
+            font-weight: 300;
             @include tablet-portrait {
                 font-size: 4rem;
                 padding-top: 1rem;
@@ -240,96 +254,34 @@ header {
 
 /// MAIN ///////////////////
 
-/////////////////////// FURNITURE ///////////////////
-
-.furnishings {
+/////////////////////// Short ///////////////////
+.short {
     
-    background: #f2f2f2;
-    padding-top: 3rem;
-    
-
+    .shortCenter {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 3rem;
+        
+    }
 
     h2 {
+        font-size: 3rem;
         text-align: center;
+        padding-bottom: .8rem;
         font-family: 'rubik';
-        padding-bottom: .5rem;
-        color: #242424;
-        font-size: 2rem;
     }
-    
+
     p {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: #f4f4f4;
-    }
-
-    .chairs {
-        width: 80%;
-       margin: 0 auto;
-        
-        position: relative;
-        height: 35rem;
-        p {
-            padding: 1rem;
-        }
-    }
-
-    .left {
-        
-        position: absolute;
-        width: 20rem;
-        color: #fff;
-        text-align: left;
-        background: #111111;
-        margin-left: -2rem;
-        margin-top: 2rem;
-        
-
-        p {
-            text-align: left;
-        }
-        
-
-    }
-
-    .leftt {
-        position: absolute;
-        width: 20rem;
-        color: #fff;
-        text-align: left;
-        background: #111111;
-        bottom: 0;
-        right: 0;
-        margin-bottom: 2rem;
-        z-index: 3;
-        p {
-            text-align: left;
-        }
-    }
-
-    .right {
-        
+        width: 300px;
         margin: 0 auto;
-        
-        background: url('/IMG/26f83c37273261.573af25f5d4e4.jpg');
-        background-position: bottom;
-        background-size: cover;
-        background-repeat: no-repeat;
-        object-fit: cover;
-        height: 100%;
-        width: 90%;
-        
-        
+        text-align: center;
     }
-    
 }
-
-
 ////////////////////
 
 .hanging {
     padding-bottom: 4rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
     img {
         height: auto;
         max-width: 100%;
