@@ -1,4 +1,4 @@
-const topnav = document.querySelector('.topnav');
+const topnav = document.querySelector('.newNav');
 const navlogo = document.querySelector('.navlogo');
 const shrink = document.querySelector('.shrink');
 const navbg = document.querySelector('.navbg')
@@ -21,6 +21,7 @@ window.addEventListener('scroll', shrinkNav);
 const menuOpen = document.querySelector('.menuOpen');
 const mobileNav = document.querySelector('.mobileNav');
 const slideX = document.querySelector('.slideX');
+const navLinks = document.querySelectorAll('mobileNav a')
 
 function slideOut() {
     mobileNav.classList.toggle('slideIn')
