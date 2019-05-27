@@ -356,7 +356,7 @@ nav {
 
 .landingPage {
   background-attachment: fixed;
-  background-image: url("/IMG/pftojpg.jpg");
+  background-image: url("/IMG/opt-sphere.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -571,23 +571,23 @@ nav {
 }
 
 .hanging .card__image--river {
-  background-image: url("/IMG/small.jpg");
+  background-image: url("/IMG/opt-small.jpg");
 }
 
 .hanging .card__image--record {
-  background-image: url("/IMG/lights.jpg");
+  background-image: url("/IMG/opt-lights.jpg");
 }
 
 .hanging .card__image--air {
-  background-image: url("/IMG/Air.jpg");
+  background-image: url("/IMG/opt-air.jpg");
 }
 
 .hanging .card__image--sculp {
-  background-image: url("/IMG/sculp.jpg");
+  background-image: url("/IMG/opt-sculp.jpg");
 }
 
 .hanging .card__image--per {
-  background-image: url("/IMG/live.jpg");
+  background-image: url("/IMG/opt-rex.jpg");
 }
 
 .hanging .card__image--ramos {
@@ -604,10 +604,6 @@ nav {
 
 .hanging .card__image--mod {
   background-image: url("/IMG/3d.jpg");
-}
-
-.hanging .card__image--per {
-  background-image: url("/IMG/live.jpg");
 }
 
 .hanging .card__title {
