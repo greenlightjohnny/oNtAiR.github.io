@@ -25,7 +25,6 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
   top: 0;
   background: transparent;
   -webkit-box-flex: 1;
@@ -358,6 +357,7 @@ nav {
   background-attachment: fixed;
   background-image: url("/IMG/opt-sphere.jpg");
   background-size: cover;
+  position: fixed;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
@@ -424,10 +424,25 @@ nav {
   list-style-type: none;
 }
 
+main {
+  background: transparent;
+  position: relative;
+  top: 100vh;
+}
+
+.short {
+  background: transparent;
+}
+
 .short .shortCenter {
-  width: 100%;
+  width: 320px;
+  background: #F25C69;
+  color: #fff;
+  border-radius: 10px;
   margin: 0 auto;
   padding-top: 3rem;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.5);
 }
 
 .short h2 {
@@ -438,14 +453,36 @@ nav {
 }
 
 .short p {
-  width: 300px;
+  width: 320px;
   margin: 0 auto;
+  padding: 0 1rem 2rem 1rem;
   text-align: center;
 }
 
 .hanging {
   padding-bottom: 4rem;
   padding-top: 1rem;
+}
+
+.hanging a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  width: 10rem;
+  margin: 0 auto;
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: #F25C69;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+.hanging a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .hanging img {
@@ -455,16 +492,27 @@ nav {
 }
 
 .hanging .btn {
-  background-color: white;
-  border: 1px solid #cccccc;
-  color: #696969;
+  background-color: #F25C69;
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+  color: #fff;
   padding: 0.5rem;
-  text-transform: lowercase;
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+  -webkit-box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+}
+
+.hanging .btn:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .hanging .btn--block {
   display: block;
-  width: 100%;
+  width: 10rem;
 }
 
 .hanging .cards {
@@ -1051,8 +1099,8 @@ hr {
 footer {
   background: #242424;
   color: #aaa;
-  z-index: 2;
-  position: relative;
+  width: 100%;
+  z-index: 4;
 }
 
 footer .foot {
@@ -1153,5 +1201,177 @@ footer .foot {
 
 .catalogWalls .hide {
   display: none;
+}
+
+.catalogTop {
+  text-align: center;
+  padding-bottom: 3rem;
+  padding: 1rem;
+}
+
+.catalogTop h1 {
+  font-family: 'rubik';
+  font-size: 3rem;
+  padding-top: 8rem;
+}
+
+.wsf {
+  display: none;
+}
+
+.wsf .flexWalls {
+  display: -ms-grid;
+  display: grid;
+  display: none;
+  grid-gap: 10px;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-rows: 300px;
+      grid-template-rows: 300px;
+  margin: 0 .5rem;
+}
+
+.wsf .flexWalls div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.wsf .flexWalls div img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wsf h2 {
+  font-family: 'rubik';
+  font-size: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.wsf p {
+  padding: 1rem;
+}
+
+@media (min-width: 600px) {
+  .wsf p {
+    margin: 0 auto;
+    width: 450px;
+  }
+}
+
+.attempt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.attempt .container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem 0 2rem 0;
+}
+
+.attempt h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.attempt p {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.attempt .cNav1, .attempt .cNav2, .attempt .cNav3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.attempt .cNav1 div, .attempt .cNav2 div, .attempt .cNav3 div {
+  display: inline-block;
+  color: #F25C69;
+  font-size: 3rem;
+}
+
+.attempt .cNav1 a, .attempt .cNav2 a, .attempt .cNav3 a {
+  color: #F25C69;
+}
+
+.attempt .cNav1 .right, .attempt .cNav2 .right, .attempt .cNav3 .right {
+  margin-left: 2rem;
+}
+
+.attempt .cNav1 .left, .attempt .cNav2 .left, .attempt .cNav3 .left {
+  margin-right: 2rem;
+}
+
+.attempt .slider {
+  margin: 0 auto;
+  position: relative;
+}
+
+.attempt img {
+  max-width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  margin: 0 auto;
+  -webkit-box-shadow: 10px 10px 20px 0 rgba(94, 47, 59, 0.2);
+          box-shadow: 10px 10px 20px 0 rgba(94, 47, 59, 0.2);
+  -webkit-transition: opacity ease-in-out all 10s;
+  transition: opacity ease-in-out all 10s;
+}
+
+.attempt img.active {
+  display: block;
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
+}
+
+.attempt .active {
+  display: block;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
