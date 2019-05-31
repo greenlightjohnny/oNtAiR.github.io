@@ -49,7 +49,8 @@ function slideOut() {
     mobileNav.classList.remove('slideIn');
 }
 
-let items = document.querySelectorAll('.mobileNav a')
+let items = document.querySelectorAll('.mobileNav  a')
+console.log(items);
 
 
 items.forEach(i => i.addEventListener('click', slideOut));

@@ -26,10 +26,11 @@ const navLinks = document.querySelectorAll('mobileNav a');
 const barOne = document.querySelector('.topBar');
 const barTwo = document.querySelector('.middleBar');
 const barThree = document.querySelector('.bottomBar');
-console.log(barOne);
+const subLinks = document.querySelectorAll('.mobileNav .mm a');
+console.log(subLinks);
 
 function slideOut() {
-    mobileNav.classList.toggle('slideIn');
+    mobileNav.classList.toggle('slideIn'); 
     barOne.classList.toggle('topA');
     barTwo.classList.toggle('middleA');
     barThree.classList.toggle('bottomA');
@@ -37,6 +38,7 @@ function slideOut() {
 }
 
 menuOpen.addEventListener('click', slideOut);
+subLinks.forEach(i => i.addEventListener('click', slideOut));
 
 
 ////////////////////////////////////// Catalog image slider //////////////

@@ -156,8 +156,8 @@ html {
           transform: translateX(100%);
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 .mobileNav ul {
