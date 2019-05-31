@@ -21,15 +21,23 @@ window.addEventListener('scroll', shrinkNav);
 
 const menuOpen = document.querySelector('.menuOpen');
 const mobileNav = document.querySelector('.mobileNav');
-const slideX = document.querySelector('.slideX');
-const navLinks = document.querySelectorAll('mobileNav a')
+
+const navLinks = document.querySelectorAll('mobileNav a');
+const barOne = document.querySelector('.topBar');
+const barTwo = document.querySelector('.middleBar');
+const barThree = document.querySelector('.bottomBar');
+console.log(barOne);
 
 function slideOut() {
-    mobileNav.classList.toggle('slideIn')
+    mobileNav.classList.toggle('slideIn');
+    barOne.classList.toggle('topA');
+    barTwo.classList.toggle('middleA');
+    barThree.classList.toggle('bottomA');
+    
 }
 
 menuOpen.addEventListener('click', slideOut);
-slideX.addEventListener('click', slideOut);
+
 
 ////////////////////////////////////// Catalog image slider //////////////
 
@@ -65,5 +73,11 @@ function showPrevious() {
 }
 triggerRight.forEach(i => i.addEventListener('click', showNext));
 triggerLeft.forEach(i => i.addEventListener('click', showPrevious));
+
+
+
+/////////////////// Fix mobile nav for landscape mode /////////
+
+
 
 

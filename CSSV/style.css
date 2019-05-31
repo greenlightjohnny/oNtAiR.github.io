@@ -41,8 +41,11 @@ html {
   width: 100%;
   margin: 0;
   z-index: 9;
-  -webkit-transition: background-color ease-in-out 2s;
-  transition: background-color ease-in-out 2s;
+  scale: 1;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: background-color ease-in-out 3s;
+  transition: background-color ease-in-out 3s;
 }
 
 .newNav ul {
@@ -92,15 +95,45 @@ html {
 }
 
 .newNav .menuOpen {
-  font-size: 2.5rem;
-  padding-top: .5rem;
-  padding-right: 2rem;
+  height: 50px;
+  width: 50px;
+  margin-right: 10%;
+  z-index: 5;
+  position: relative;
+}
+
+.newNav .menuOpen .ham {
+  display: block;
+  width: 100%;
+  margin-top: 17%;
+  height: 15%;
+  background: red;
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+.newNav .menuOpen .topA {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(1rem) rotate(-45deg);
+          transform: translateY(1rem) rotate(-45deg);
+}
+
+.newNav .menuOpen .middleA {
+  opacity: 0;
+}
+
+.newNav .menuOpen .bottomA {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(-1rem) rotate(45deg);
+          transform: translateY(-1rem) rotate(45deg);
 }
 
 .newNav .menuOpen a {
   color: #F25C69;
-  letter-spacing: 1.9px;
-  font-size: 2.5rem;
+  width: 100%;
+  height: 100%;
 }
 
 .newNav .menuOpen a:hover {
@@ -114,8 +147,8 @@ html {
 }
 
 .mobileNav {
-  z-index: 11;
-  height: 100vh;
+  z-index: 4;
+  height: 100%;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -130,45 +163,42 @@ html {
 .mobileNav ul {
   list-style-type: none;
   text-align: center;
-  margin-top: 10%;
 }
 
-.mobileNav ul .topLi {
+.mobileNav #slideOut {
+  margin-top: 3rem;
+}
+
+@media screen and (orientation: landscape) {
+  .mobileNav #slideOut {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 4rem;
+  }
+}
+
+.mobileNav .topLi {
   font-size: 2rem;
   padding-top: 1rem;
   color: #f4f4f4;
 }
 
-.mobileNav ul .mm {
+.mobileNav .mm {
   font-size: 1.5rem;
   margin-top: .5rem;
 }
 
-.mobileNav ul .mm a {
+.mobileNav .mm a {
   color: #bbb;
 }
 
-.mobileNav ul a {
+.mobileNav a {
   text-decoration: none;
   color: #f4f4f4;
-}
-
-.mobileNav ul .slideX a {
-  color: red;
-  display: inline-block;
-  margin: 0 0 0 auto;
-  width: 100%;
-}
-
-.mobileNav ul .slideX a .fa {
-  margin: 0 0 0 auto;
-  text-align: right;
-  width: 100%;
-}
-
-.mobileNav .fa-times {
-  margin: 0 0 0 80%;
-  display: block;
 }
 
 .slideIn {
@@ -179,6 +209,7 @@ html {
 .slideX {
   z-index: 12;
   padding-top: 1rem;
+  position: relative;
 }
 
 .slideX a {
@@ -193,6 +224,10 @@ html {
 }
 
 .navbg {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -226,10 +261,12 @@ nav {
 
 .sub-menu li {
   font-size: 14px;
+  text-align: center;
+  margin-left: -2rem;
   background: rgba(0, 0, 0, 0.8);
   padding: 8px 0;
   color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  width: 12rem;
   /*display: none;*/
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -846,6 +883,7 @@ main {
 .aboutUs h3 {
   padding-bottom: 1rem;
   padding-top: 1rem;
+  font-family: 'rubik';
 }
 
 .aboutUs .flexCards {
@@ -897,6 +935,7 @@ main {
   font-family: 'rubik';
   font-size: 3rem;
   text-align: center;
+  font-family: 'rubik';
   padding-top: 7rem;
   padding-bottom: 3rem;
 }
@@ -908,7 +947,7 @@ main {
 }
 
 .work .workContact {
-  padding-bottom: 0;
+  padding-bottom: 3rem;
 }
 
 .work .workContact h2 {
@@ -924,10 +963,12 @@ main {
 
 .work .workImage {
   margin: 0 auto;
+  display: none;
 }
 
 @media (min-width: 600px) {
   .work .workImage {
+    display: block;
     max-width: 90%;
   }
 }
@@ -966,8 +1007,6 @@ main {
 .work .workInfo div {
   max-width: 450px;
   margin: 1rem;
-  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 .work .workInfo ul {
@@ -983,12 +1022,12 @@ main {
   padding-top: 1rem;
 }
 
-.work .workInfo p {
+.work .workInfo h3 {
   text-align: center;
-  background: #F25C69;
+  font-size: 3rem;
+  font-family: 'rubik';
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  font-size: 1.3rem;
   padding-left: 1.3rem;
   padding-right: 1.3rem;
   padding-top: 1rem;
