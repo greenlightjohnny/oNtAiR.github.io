@@ -660,6 +660,10 @@ nav {
     ul {
         list-style-type: none;
     }
+
+    .uni {
+        font-size: 3rem;
+    }
   }
   
   .section-header {
@@ -786,7 +790,7 @@ nav {
   }
   
   .list-item {
-    line-height: 4;
+    line-height: 3rem;
     color: #aaa;
   }
   
