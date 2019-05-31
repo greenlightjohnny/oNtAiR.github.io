@@ -4,7 +4,7 @@
 //Fade out landing page on scroll//
 const opacityAnchor = document.querySelector('.opacityAnchor').offsetTop;
 function fadeOnScroll() {
-    if(window.pageYOffset > 0) {
+    if(window.pageYOffset > 0) { 
         const opacity = (window.pageYOffset / opacityAnchor);
         
         const beeBackground = document.querySelector('#top');
