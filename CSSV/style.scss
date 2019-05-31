@@ -201,7 +201,7 @@ html {
     }
 
     #slideOut {
-        margin-top: 3rem;
+        margin-top: 6rem;
         @media screen and (orientation: landscape) {
             display: flex;
             justify-content: space-evenly;
@@ -210,15 +210,15 @@ html {
         
     }
        .topLi {
-           font-size: 2rem;
+           font-size: 1.7rem;
            padding-top: 1rem;
            color: $offwhite;
        }
 
        .mm {
-           font-size: 1.5rem;
+           font-size: 1.3rem;
            
-           margin-top: .5rem;
+           margin-top: .3rem;
 
            a {
             color: $greytext;
@@ -301,8 +301,8 @@ nav {
     padding: 8px 0;
     color: white;
     width: 12rem;
-    /*display: none;*/
     transform: scale(0);
+    
     transform-origin: top center;
     transition: all 300ms ease-in-out;
   }
@@ -319,13 +319,19 @@ nav {
   
   .menu > li:hover .sub-menu li{
     /*display: block;*/
-    transform: scale(1);
+    //transform: scale(1)
   }
   
   
   .menu > li:hover .sub-menu {
-    transform: scale(1);
+    //transform: scale(1)
   }
+
+  .closeSub {
+      display: none;
+  }
+
+  
   
 
   //////////////////
@@ -404,7 +410,9 @@ nav {
         
     }
 }
-
+.subTransform {
+    transform: scale(1) !important;
+}
 
 /// MAIN ///////////////////
     main {
@@ -662,7 +670,7 @@ nav {
     }
 
     .uni {
-        font-size: 3rem;
+        font-size: 1rem;
     }
   }
   

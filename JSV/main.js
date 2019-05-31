@@ -27,7 +27,8 @@ const barOne = document.querySelector('.topBar');
 const barTwo = document.querySelector('.middleBar');
 const barThree = document.querySelector('.bottomBar');
 const subLinks = document.querySelectorAll('.mobileNav .mm a');
-console.log(subLinks);
+const navLink = document.querySelectorAll('mobileNav a');
+
 
 function slideOut() {
     mobileNav.classList.toggle('slideIn'); 
@@ -78,7 +79,44 @@ triggerLeft.forEach(i => i.addEventListener('click', showPrevious));
 
 
 
-/////////////////// Fix mobile nav for landscape mode /////////
+/////////////////// close sub menu from hover /////////
+
+const subMenu = document.querySelectorAll('.sub-menu');
+const subLi = document.querySelectorAll('.sub-menu li');
+const subA = document.querySelectorAll('.sub-menu a');
+
+
+
+const lastA = document.querySelectorAll('.lastA');
+
+function onHover() {
+
+   
+   console.log(this.lastElementChild);
+   const subs = this.lastElementChild;
+   subs.classList.add('subTransform');
+   subLi.forEach(i => i.classList.add('subTransform'));
+}
+
+function onLeave() {
+  const subs = this.lastElementChild;
+   subs.classList.remove('subTransform');
+   subLi.forEach(i => i.classList.remove('subTransform'));
+}
+
+function onClick() {
+  
+  subA.forEach(i => i.classList.remove('subTransform'));
+  this.parentElement.parentElement.classList.remove('subTransform');
+}
+
+subA.forEach(i => i.addEventListener('click', onClick));
+lastA.forEach(i => i.addEventListener('mouseenter', onHover));
+lastA.forEach(i => i.addEventListener('mouseleave', onLeave));
+
+
+
+
 
 
 

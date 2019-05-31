@@ -166,7 +166,7 @@ html {
 }
 
 .mobileNav #slideOut {
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 
 @media screen and (orientation: landscape) {
@@ -182,14 +182,14 @@ html {
 }
 
 .mobileNav .topLi {
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding-top: 1rem;
   color: #f4f4f4;
 }
 
 .mobileNav .mm {
-  font-size: 1.5rem;
-  margin-top: .5rem;
+  font-size: 1.3rem;
+  margin-top: .3rem;
 }
 
 .mobileNav .mm a {
@@ -267,7 +267,6 @@ nav {
   padding: 8px 0;
   color: white;
   width: 12rem;
-  /*display: none;*/
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: top center;
@@ -286,13 +285,10 @@ nav {
 
 .menu > li:hover .sub-menu li {
   /*display: block;*/
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
-.menu > li:hover .sub-menu {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.closeSub {
+  display: none;
 }
 
 .landingPage {
@@ -364,6 +360,11 @@ nav {
 
 .landingPage .title h3 ul {
   list-style-type: none;
+}
+
+.subTransform {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
 }
 
 main {
@@ -627,7 +628,7 @@ main {
 }
 
 #contact .uni {
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 .section-header {
