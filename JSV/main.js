@@ -83,7 +83,7 @@ triggerLeft.forEach(i => i.addEventListener('click', showPrevious));
 
 const subMenu = document.querySelectorAll('.sub-menu');
 const subLi = document.querySelectorAll('.sub-menu li');
-const subA = document.querySelectorAll('.sub-menu a');
+const subA = document.querySelectorAll('.mobileNav a');
 
 
 
@@ -92,7 +92,7 @@ const lastA = document.querySelectorAll('.lastA');
 function onHover() {
 
    
-   console.log(this.lastElementChild);
+  
    const subs = this.lastElementChild;
    subs.classList.add('subTransform');
    subLi.forEach(i => i.classList.add('subTransform'));
@@ -115,8 +115,9 @@ lastA.forEach(i => i.addEventListener('mouseenter', onHover));
 lastA.forEach(i => i.addEventListener('mouseleave', onLeave));
 
 
+const mobileA = document.querySelectorAll('.mobileNav a');
 
-
+mobileA.forEach(i => i.addEventListener('click', slideOut));
 
 
 
