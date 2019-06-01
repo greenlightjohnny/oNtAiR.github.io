@@ -834,7 +834,7 @@ nav {
   
   /* Social Media Icons */
   .social {
-      text-align: left;
+
         padding-top: 4.5rem;
         display: flex;
         flex: 1;
@@ -844,7 +844,7 @@ nav {
           display: inline;
           font-size: 3rem;
           color: #aaa;
-          padding-right: 1rem;
+          
       }
 
       a {
@@ -1331,7 +1331,12 @@ footer {
       }
 }
 
-
+.icon {
+    height: 50px;
+    width: 50px;
+    
+    fill: currentColor;
+}
 
 
 

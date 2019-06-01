@@ -825,7 +825,6 @@ main {
 
 /* Social Media Icons */
 .social {
-  text-align: left;
   padding-top: 4.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -842,7 +841,6 @@ main {
   display: inline;
   font-size: 3rem;
   color: #aaa;
-  padding-right: 1rem;
 }
 
 .social a {
@@ -1322,5 +1320,11 @@ footer .foot {
   to {
     opacity: 1;
   }
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  fill: currentColor;
 }
 /*# sourceMappingURL=style.css.map */
