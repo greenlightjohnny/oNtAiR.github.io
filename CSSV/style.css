@@ -9,7 +9,7 @@ html, body {
 *:after,
 *:before {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit; 
+          box-sizing: inherit;
 }
 
 * {
@@ -312,7 +312,7 @@ nav {
   position: fixed;
   text-align: center;
   top: 30%;
-  
+  font-family: '';
 }
 
 .landingPage .title h1 {
@@ -568,7 +568,6 @@ main {
 .hanging .card__image--river {
   background-image: url("/IMG/opt-small.jpg");
 }
-
 
 .hanging .card__image--record {
   background-image: url("/IMG/opt-lights.jpg");

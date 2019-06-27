@@ -15,7 +15,7 @@ body {
 header {
   height: 100vh;
   width: 100%;
-  background-image: url("/IMG3/art50-min.jpg");
+  background-image: url("/IMG3/art50ss.jpg");
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;
@@ -127,6 +127,8 @@ header h2 {
 #mainNav .ham {
   margin: 1rem 10% 1rem 0;
   font-size: 2rem;
+  height: 50px;
+  width: 50px;
 }
 
 @media (min-width: 811px) {
@@ -139,8 +141,17 @@ header h2 {
   color: #242424;
 }
 
-#mainNav .ham .fa-times {
-  color: red;
+#mainNav .ham .open {
+  height: 50px;
+  width: 50px;
+}
+
+#mainNav .ham .open span {
+  width: 100%;
+  height: 15%;
+  display: block;
+  background: #000;
+  margin-top: 15%;
 }
 
 .mobileNav {
@@ -181,6 +192,31 @@ header h2 {
   left: 88%;
   color: red;
   font-size: 3rem;
+  height: 50px;
+  width: 50px;
+}
+
+.slideX span {
+  width: 100%;
+  height: 8px;
+  position: relative;
+  top: 50%;
+  display: block;
+  background: #d9320d;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 20px;
+}
+
+.slideX span:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 8px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  background: #d9320d;
+  border-radius: 50px;
 }
 
 .slideIn {
@@ -223,7 +259,6 @@ header h2 {
 
 .articles #tt {
   text-align: center;
-  text-transform: uppercase;
   font-family: 'rubik';
   font-size: 3rem;
   letter-spacing: .1rem;
@@ -415,7 +450,6 @@ header h2 {
 .about h2 {
   color: #242424;
   text-align: center;
-  text-transform: uppercase;
   font-family: 'rubik';
   font-size: 3rem;
   letter-spacing: .1rem;
@@ -502,7 +536,6 @@ header h2 {
 
 .store h2 {
   text-align: center;
-  text-transform: uppercase;
   font-family: 'rubik';
   font-size: 3rem;
   letter-spacing: .1rem;
@@ -661,7 +694,6 @@ header h2 {
 
 .contact h2 {
   text-align: center;
-  text-transform: uppercase;
   font-family: 'rubik';
   font-size: 3rem;
   letter-spacing: .1rem;
