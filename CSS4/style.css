@@ -1,0 +1,130 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 0;
+}
+
+*, *:before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100vh;
+  background: #f5f5f5;
+  position: relative;
+}
+
+header h1 {
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
+
+main {
+  position: relative;
+}
+
+main nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f5f5f5;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.3rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 2;
+}
+
+main nav .logo {
+  margin-left: 10%;
+  height: 50px;
+}
+
+main nav ul {
+  list-style-type: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  position: relative;
+  max-height: 0;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
+}
+
+main nav li {
+  margin-top: 20px;
+  text-align: center;
+}
+
+main nav a {
+  text-decoration: none;
+  color: black;
+}
+
+main nav .menuIcon {
+  width: 50px;
+  height: 50px;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+  margin-right: 10%;
+}
+
+main nav .menuIcon .ham {
+  display: block;
+  width: 100%;
+  margin-top: 17%;
+  height: 15%;
+  background: red;
+  -webkit-transition: all ease-in-out .5s;
+  transition: all ease-in-out .5s;
+}
+
+main nav .menuIcon .topA {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(1rem) rotate(-45deg);
+          transform: translateY(1rem) rotate(-45deg);
+}
+
+main nav .menuIcon .middleA {
+  opacity: 0;
+}
+
+main nav .menuIcon .bottomA {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(-1rem) rotate(45deg);
+          transform: translateY(-1rem) rotate(45deg);
+}
+
+.showMenu {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  max-height: 1000px;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.articles {
+  height: 200vh;
+  background: darkslateblue;
+}
+/*# sourceMappingURL=style.css.map */
