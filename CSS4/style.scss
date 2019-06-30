@@ -36,7 +36,7 @@
 
  @mixin sectionHeading {
      text-align: center;
-     font-size: 2rem;
+     font-size: 3rem;
      letter-spacing: .2rem;
      padding: 1.5rem 0 1.5rem 0;
  }
@@ -215,6 +215,10 @@ main {
 
 /********** Articles *********/
 
+.articles {
+    background: linear-gradient(#fff, $offwhitethree);
+    padding-bottom: 3rem;
+}
 #tt {
     @include sectionHeading;
 }
@@ -507,5 +511,150 @@ main {
         @include paragraphPadding;
     }
 }
+
+
+/**************************************************************************
+*********************** Contact *****************************************/
+
+.contact {
+    background: $offblack;
+    color: $offwhite;
+    .padding {
+        padding: 0 15px 0 15px;
+    }
+
+    .contactFlex {
+        @include tabletL {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex: 1;
+        }
+
+        @include desktop {
+            width: 80%;
+        }
+    }
+
+    .contactTop {
+
+        .phone {
+            color: #4886d9;
+            font-size: 2rem;
+        }
+
+        a:hover {
+            color: #4886d9;
+        }
+        
+        @include tabletP {
+            width: 90%;
+            
+            margin:0 auto;
+        }
+        @include tabletL {
+            margin: 0 2rem 0 2rem;
+        }
+
+        @include desktop {
+            margin: 0 5%;
+        }
+    }
+    .form {
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @include tabletL {
+            
+            margin: 0 2rem 0 2rem;
+        }
+
+        @include desktop {
+            margin: 0 5%;
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $offwhite
+    }
+    #contactform {
+        padding-bottom: 3rem;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 5%;
+        border-radius: 7px;
+        font-size: 2rem;
+        border-style: outset;
+        font-family: 'montserrat';
+    }
+
+    #button {
+        background: rgb(213, 245, 71);
+        border: none;
+        border-radius: 20px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 0;
+        cursor: pointer;
+        
+        
+
+        @include tabletP {
+            width: 12rem;
+        }
+
+        #button:hover {
+            cursor: pointer;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        margin-bottom: 5%;
+        font-size: 2rem;
+        border-radius: 10px;
+        min-height: 5rem;
+    }
+
+    h2 {
+        @include sectionHeading;
+        .fas {
+        color: #4886d9;
+
+        }
+    }
+
+    p {
+        line-height: 1.7rem;
+        @include paragraphPadding();
+        
+    }
+}
+
+/**************************************************************************
+*********************** Footer *****************************************/
+
+footer {
+
+        background-color: #353839;
+        color: $offwhite;
+        
+        div {
+            width: 90%;
+            margin: 0 auto;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            text-align: center;
+        }
+}
+
 
 
