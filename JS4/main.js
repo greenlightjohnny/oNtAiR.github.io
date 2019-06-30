@@ -16,4 +16,18 @@ function menuToggle() {
 }
 menu.addEventListener('click', menuToggle)
 
-console.log(menu);
+///////// Box shadow menu sticky Nav ////////
+
+const navAnch = document.querySelector('.navAnch');
+const navBar = document.querySelector('nav');
+
+function addShadow() {
+    const navOffset = navAnch.offsetTop;
+    console.log(navOffset);
+    console.log(window.pageYOffset);
+    if(window.pageYOffset >= navOffset) {
+        navBar.classList.add('addShadow');
+    } else navBar.classList.remove('addShadow');
+}
+
+window.addEventListener('scroll', addShadow);

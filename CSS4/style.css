@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto|Tangerine|Zilla+Slab&display=swap");
+/******pic colors ******/
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 0;
+  font-family: 'Montserrat';
 }
 
 *, *:before, *::after {
@@ -13,29 +16,33 @@ body {
 
 header {
   height: 100vh;
-  background: #f5f5f5;
-  position: relative;
+  background-image: url("/IMG4/art50tiny.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 header h1 {
   font-size: 3rem;
   text-align: center;
   position: relative;
+  color: #f2f2f2;
   top: 30%;
-}
-
-main {
-  position: relative;
+  font-family: 'tangerine';
+  letter-spacing: .2rem;
+  font-weight: bold;
+  font-size: 3.5rem;
 }
 
 main nav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #f5f5f5;
+  -webkit-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  background: #fff;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -43,15 +50,22 @@ main nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 1.3rem;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   z-index: 2;
 }
 
 main nav .logo {
   margin-left: 10%;
   height: 50px;
+  width: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+main nav .logo img {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+  margin: auto;
 }
 
 main nav ul {
@@ -62,6 +76,9 @@ main nav ul {
           transform: scaleY(0);
   position: relative;
   max-height: 0;
+  font-weight: bold;
+  letter-spacing: .1rem;
+  padding-bottom: 20px;
   -webkit-transform-origin: top;
           transform-origin: top;
   -webkit-transition: all 1000ms ease-in-out;
@@ -84,6 +101,7 @@ main nav .menuIcon {
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
   margin-right: 10%;
+  margin-bottom: 2%;
 }
 
 main nav .menuIcon .ham {
@@ -123,8 +141,312 @@ main nav .menuIcon .bottomA {
           transform: scaleY(1);
 }
 
-.articles {
-  height: 200vh;
-  background: darkslateblue;
+.addShadow {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navAnch {
+  position: relative;
+}
+
+/********** Articles *********/
+#tt {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+/***************************** CODE FROM https://github.com/web-tiki/responsive-grid-of-hexagons *****************/
+.hexflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.hexagon {
+  visibility: hidden;
+  position: relative;
+  outline: 1px solid transparent;
+}
+
+.hexagon::after {
+  content: '';
+  display: block;
+  padding-bottom: 86.602%;
+}
+
+.hexIn {
+  position: absolute;
+  width: 96%;
+  margin: 0 2%;
+  padding-bottom: 110.851%;
+  overflow: hidden;
+  outline: 1px solid transparent;
+  visibility: hidden;
+  outline: 1px solid transparent;
+  -webkit-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+          transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.hexIn * {
+  position: absolute;
+  visibility: visible;
+  outline: 1px solid transparent;
+}
+
+.hexLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  color: #f2f2f2;
+  overflow: hidden;
+  -webkit-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+          transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+}
+
+.hexagon img {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  margin: 0 auto;
+  height: 100%;
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+          transform: rotate3d(0, 0, 0, 0deg);
+}
+
+.hexagon h1, .hexagon p {
+  width: 100%;
+  padding: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(111, 102, 241, 0.8);
+  -webkit-transition: opacity .3s ease-out, -webkit-transform .2s ease-out;
+  transition: opacity .3s ease-out, -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out, opacity .3s ease-out;
+  transition: transform .2s ease-out, opacity .3s ease-out, -webkit-transform .2s ease-out;
+}
+
+.hexagon h1 {
+  color: lightblue;
+  bottom: 50%;
+  padding-top: 50%;
+  z-index: 1;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
+.hexagon p {
+  top: 50%;
+  padding-bottom: 50%;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+
+.hexagon h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  width: 10%;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+
+.hexLink:hover h1, .hexLink:focus h1,
+.hexLink:hover p, .hexLink:focus p {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 1201px) {
+  .hexflex {
+    padding-bottom: 4.4%;
+  }
+  .hexagon {
+    width: 20%;
+  }
+  .hexagon:nth-child(9n+6) {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 901px) {
+  .hexflex {
+    padding-bottom: 5.5%;
+  }
+  .hexagon {
+    width: 25%;
+  }
+  .hexagon:nth-child(7n+5) {
+    margin-left: 12.5%;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+  .hexflex {
+    padding-bottom: 7.4%;
+  }
+  .hexagon {
+    width: 33.333%;
+  }
+  .hexagon:nth-child(5n+4) {
+    margin-left: 16.666%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hexflex {
+    padding-bottom: 11.2%;
+  }
+  .hexagon {
+    width: 50%;
+  }
+  .hexagon:nth-child(3n+3) {
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 400px) {
+  .hexflex {
+    font-size: 13px;
+  }
+}
+
+/**************************************************************************
+*********************** ABOUT *****************************************/
+.about {
+  background: #fdfdfd;
+}
+
+.about h2 {
+  color: #242424;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+.about p {
+  line-height: 1.7rem;
+  color: #242424;
+  padding: 5px 15px 30px 15px;
+}
+
+.about h3 {
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #242424;
+}
+
+.about .fas {
+  color: #4886d9;
+}
+
+@media (min-width: 900px) {
+  .about article div {
+    z-index: 1;
+    background: #fff;
+    margin: 1rem;
+    margin-bottom: -7rem;
+    border-radius: 9px;
+    -webkit-box-shadow: 0 3px 10px rgba(50, 50, 50, 0.05);
+            box-shadow: 0 3px 10px rgba(50, 50, 50, 0.05);
+    /* box-shadow: 0px 6px 10px #000000; */
+  }
+}
+
+@media (min-width: 600px) {
+  .about article {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .about article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+/**************************************************************************
+*********************** STORE *****************************************/
+.store {
+  background: #272b2e;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 900px) {
+  .store {
+    padding-top: 7rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .store .storeTop {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .store .storeTop p {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 3px 10px rgba(50, 50, 50, 0.05);
+            box-shadow: 0 3px 10px rgba(50, 50, 50, 0.05);
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.store h2 {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  padding: 1.5rem 0 1.5rem 0;
+  color: #f4f4f4;
+  padding-bottom: .5rem;
+}
+
+.store h2 .fas {
+  color: #4886d9;
+}
+
+.store h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #f4f4f4;
+  font-size: 1.8rem;
+}
+
+.store h3 .some {
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+}
+
+.store p {
+  color: #f4f4f4;
+  line-height: 1.7rem;
+  padding: 5px 15px 30px 15px;
 }
 /*# sourceMappingURL=style.css.map */

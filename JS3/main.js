@@ -18,7 +18,7 @@ function fadeOnScroll() {
 /////////////// STICK NAV ////////////////////////////
 
 const nav = document.querySelector('#mainNav');
-
+ 
 
 function stickyNav() {
     const anch = document.querySelector('.anch');
