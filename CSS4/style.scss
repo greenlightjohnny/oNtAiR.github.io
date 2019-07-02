@@ -68,9 +68,14 @@ $compgreen: #7BBF2E;
 
 $compblue: #23a1a6;
 
+
+* {
+    margin: 0;
+    padding: 0;
+}
 html {
     box-sizing: border-box;
-    ;
+    
 }
 
 body {
@@ -82,8 +87,7 @@ body {
 
 *, *:before, *::after {
     box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+    
 }
 
 
