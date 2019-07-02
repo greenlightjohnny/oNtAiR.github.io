@@ -1,3 +1,27 @@
+
+//Fade out landing page on scroll//
+const opacityAnchor = document.querySelector('.opacityAnchor').offsetTop;
+function fadeOnScroll() {
+    if(window.pageYOffset >= 0 & window.innerWidth > 599) { 
+        const opacity = (window.pageYOffset / opacityAnchor);
+        
+        const beeBackground = document.querySelector('header');
+        beeBackground.style.background = "linear-gradient(rgba(255, 255, 255, " + (opacity / 2) + "), rgba(255, 255, 255, " + (opacity) + ")), url('./IMG3/art50ss.jpg')";
+    } else if(window.pageYOffset >= 0 & window.innerWidth <= 599) {
+        const opacity = (window.pageYOffset / opacityAnchor);
+        
+        const beeBackground = document.querySelector('header');
+        beeBackground.style.background = "linear-gradient(rgba(255, 255, 255, " + (opacity / 2) + "), rgba(255, 255, 255, " + (opacity) + ")), url('./IMG3/art50-mobile.jpg')", "background-position: center", "background-size: cover", "background-repeat: no-repeat";
+    }
+}
+
+window.addEventListener('scroll', fadeOnScroll);
+window.addEventListener('resize', fadeOnScroll);
+
+
+
+
+
 /////// menu open close //////////
 
 let menu = document.querySelector(".menuIcon");

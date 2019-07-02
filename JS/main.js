@@ -14,7 +14,7 @@ function scrollFade() {
         beeImage.style.background = "linear-gradient(rgba(255, 255, 255, " + (opacity / 2) + "), rgba(255, 255, 255, " + (opacity ) + ")), url('./Images/a50.jpg')";
     }
 }
-
+ 
 
 
 window.addEventListener('scroll', scrollFade);

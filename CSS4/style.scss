@@ -70,8 +70,10 @@ $compblue: #23a1a6;
 
 body {
     box-sizing: border-box;
-    z-index: 0;
+    
     font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
 }
 
 *, *:before, *::after {
@@ -80,16 +82,38 @@ body {
     padding: 0;
 }
 
+* {
+    margin: 0;
+    border: 0;
+    border-width: 0;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
 header {
     height: 100vh;
-    background-image: url('/IMG4/art50tiny.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('/IMG3/art50ss.jpg'); 
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+
+    @include phone {
+       background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('/IMG3/art50-mobile.jpg');
+    }
+
+    img {
+        display: inline-block;
+    }
     
 
     h1 {
-        font-size: 3rem;
+        
         text-align: center;
         position: relative;
         color: #f2f2f2;
@@ -98,7 +122,25 @@ header {
         letter-spacing: .2rem;
         font-weight: bold;
         font-size: 3.5rem;
+
+        @include tabletP {
+            font-size: 4rem;
+        }
+
+        @include tabletL {
+            font-size: 5rem;
+        }
     }
+}
+
+.opacityAnchor {
+    position: relative;
+    top: 40%;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
 }
 
 main {
@@ -142,11 +184,24 @@ main {
             padding-bottom: 20px;
             transform-origin: top;
             transition: all 1000ms ease-in-out;
+
+            @include tabletL {
+                opacity: 1;
+                visibility: visible;
+                min-height: 4rem;
+                transform: scaleY(1);
+                margin-right: 10%;
+            }
         }
 
         li {
             margin-top: 20px;
             text-align: center;
+
+            @include tabletL {
+                display: inline-block;
+                margin-left: 1rem;
+            }
             
         }
         
@@ -161,6 +216,10 @@ main {
             transition: all ease-in-out 300ms;
             margin-right: 10%;
             margin-bottom: 2%;
+
+            @include tabletL {
+                display: none;
+            }
             .ham {
                 display: block;
                 width: 100%;
@@ -294,17 +353,17 @@ main {
     width: 100%;
     padding: 5%;
     box-sizing: border-box;
-    background-color: rgba(111, 102, 241, 0.8);
+    
     transition: transform .2s ease-out, opacity .3s ease-out;
 }
 
 .hexagon h1 {
-    color: lightblue;
+    color: #fff;
     bottom: 50%;
     padding-top: 50%;
 
     z-index: 1;
-    transform: translate3d(0, -100%, 0);
+    
 }
 
 .hexagon p {
@@ -326,6 +385,7 @@ main {
 }
 
 
+////// Hover ///////////
 
 
 
@@ -333,6 +393,22 @@ main {
 .hexLink:hover p, .hexLink:focus p {
 
     transform: translate3d(0, 0, 0);
+
+    
+}
+
+.hexLink:hover img {
+    
+    transform: scale(1.2); 
+}
+
+
+
+.hexLink img {
+    
+    
+    transition:  all ease-in-out 1s;
+    
 }
 
 
@@ -398,11 +474,15 @@ main {
 .about {
     background: #fdfdfd ;
     
+        .sTitle {
+            text-align: center;
+        }
     
 
     h2 {
         color: $offblack;
         @include sectionHeading;
+        padding-bottom: 0;
     }
 
     p {
