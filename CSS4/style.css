@@ -3,14 +3,10 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
   font-family: 'Montserrat';
-  margin: 0;
-  padding: 0;
 }
 
 *, *:before, *::after {
@@ -18,16 +14,6 @@ body {
           box-sizing: inherit;
   margin: 0;
   padding: 0;
-}
-
-* {
-  margin: 0;
-  border: 0;
-  border-width: 0;
-}
-
-::-webkit-scrollbar-track {
-  display: none;
 }
 
 header {

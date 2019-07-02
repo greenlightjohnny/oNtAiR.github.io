@@ -70,16 +70,14 @@ $compblue: #23a1a6;
 
 html {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    ;
 }
 
 body {
    
     
     font-family: 'Montserrat';
-    margin: 0;
-    padding: 0;
+    
 }
 
 *, *:before, *::after {
@@ -88,15 +86,9 @@ body {
     padding: 0;
 }
 
-* {
-    margin: 0;
-    border: 0;
-    border-width: 0;
-}
 
-::-webkit-scrollbar-track {
-    display: none;
-}
+
+
 
 header {
     height: 100vh;
