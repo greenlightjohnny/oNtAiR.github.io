@@ -38,8 +38,10 @@
      text-align: center;
      font-size: 3rem;
      letter-spacing: .2rem;
-     padding: 1.5rem 0 1.5rem 0;
+     padding: 2rem 0 2rem 0;
      color: #f2f2f2;
+     font-family: 'tangerine';
+     font-weight: bold;
  }
 
  @mixin paragraphPadding {
@@ -333,7 +335,7 @@ main {
 /********** Articles *********/
 
 .articles {
-    background: linear-gradient(#242424, #000);
+    background-image: linear-gradient(#242424, #0c0c0c);
     padding-bottom: 3rem;
 }
 #tt {
@@ -530,7 +532,7 @@ main {
 
 
 .about {
-    background: #242424;
+    
     
         .sTitle {
             text-align: center;
@@ -545,28 +547,30 @@ main {
 
     p {
         line-height: 1.7rem;
-        color: $offblack;
+        color: $offwhite;
         @include paragraphPadding;
     }
 
     h3 {
         padding-top: 1rem;
         @include subHeading;
-        color: $offblack;
+        color: $offwhite;
        
     }
-    .fas  {
-        color: #4886d9;
-    }
+    
 
     article {
 
         div {
 
+            background: transparent;
+            color: $offwhite;
+
             @include tabletL {
             z-index: 1;
-            background: #fff;
+            
             margin: 1rem;
+            color: $offwhite;
             margin-bottom: -7rem;
             border-radius: 9px;
             box-shadow:  0 3px 10px rgba(50,50,50,0.05);
@@ -591,7 +595,7 @@ main {
 *********************** STORE *****************************************/
 
 .store {
-    background: #272b2e;
+    
     padding-bottom: 4rem;
 
 
@@ -650,7 +654,9 @@ main {
     }
 }
 
-
+.bgC {
+    background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
+}
 /**************************************************************************
 *********************** Contact *****************************************/
 
