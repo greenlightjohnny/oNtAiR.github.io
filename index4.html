@@ -192,11 +192,13 @@
 
                 <div class="form">
                         <form id="contactform" action="//formspree.io/your@email.com" method="POST">
+                            <label for="name">Name</label>
+                            <input type="text" name="name"  id="name" placeholder="">
                             
-                            <input type="text" name="name" label="name" id="name" placeholder="Name">
-                            
+                            <label for="_replyto">Email</label>
                             <input type="email" name="_replyto" label="email" id="email" placeholder="Email">
                             
+                            <label for="message">Message</label>
                             <textarea name="message" id="text" label="message" placeholder="Ask us anything!"></textarea>
                             <label for="button"></label>
                             <input id="button" type="submit" value="Send">
