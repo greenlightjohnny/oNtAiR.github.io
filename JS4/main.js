@@ -6,12 +6,12 @@ function fadeOnScroll() {
         const opacity = (window.pageYOffset / opacityAnchor);
         
         const beeBackground = document.querySelector('header');
-        beeBackground.style.background = "linear-gradient(rgba(255, 255, 255, " + (opacity / 2) + "), rgba(255, 255, 255, " + (opacity) + ")), url('./IMG3/art50ss.jpg')";
+        beeBackground.style.background = "linear-gradient(rgba(36, 36, 36, " + (opacity / 2) + "), rgba(36, 36, 36, " + (opacity) + ")), url('./IMG3/art50ss.jpg')";
     } else if(window.pageYOffset >= 0 & window.innerWidth <= 599) {
         const opacity = (window.pageYOffset / opacityAnchor);
         
         const beeBackground = document.querySelector('header');
-        beeBackground.style.background = "linear-gradient(rgba(255, 255, 255, " + (opacity / 2) + "), rgba(255, 255, 255, " + (opacity) + ")), url('./IMG3/art50-mobile.jpg')", "background-position: center", "background-size: cover", "background-repeat: no-repeat";
+        beeBackground.style.background = "linear-gradient(rgba(36, 36, 36, " + (opacity / 2) + "), rgba(36, 36, 36, " + (opacity) + ")), url('./IMG3/art50-mobile.jpg')", "background-position: center", "background-size: cover", "background-repeat: no-repeat";
     }
 }
 
@@ -26,19 +26,22 @@ window.addEventListener('resize', fadeOnScroll);
 
 let menu = document.querySelector(".menuIcon");
 let menuList = document.querySelector("nav ul");
-const barOne = document.querySelector('.topBar');
-const barTwo = document.querySelector('.middleBar');
-const barThree = document.querySelector('.bottomBar');
+const menuT = document.querySelector(".ham");
+const menuItems = document.querySelectorAll('nav li a');
 
+console.log(menuItems);
 
 function menuToggle() {
     menuList.classList.toggle('showMenu');
     menu.classList.toggle('menuMove');
-    barOne.classList.toggle('topA');
-    barTwo.classList.toggle('middleA');
-    barThree.classList.toggle('bottomA')
+    
+
+    menu.classList.toggle('open');
+    console.log(this)
+
 }
 menu.addEventListener('click', menuToggle)
+menuItems.forEach(i => i.addEventListener('click', menuToggle));
 
 ///////// Box shadow menu sticky Nav ////////
 
@@ -55,3 +58,6 @@ function addShadow() {
 }
 
 window.addEventListener('scroll', addShadow);
+
+
+////////// Smooth Scroll //////////

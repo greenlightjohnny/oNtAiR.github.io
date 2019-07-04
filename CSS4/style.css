@@ -19,23 +19,32 @@ body {
           box-sizing: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 header {
   height: 100vh;
   width: 100%;
   min-width: 100%;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url("/IMG3/art50ss.jpg");
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("/IMG3/art50ss.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(36, 36, 36, 0)), to(rgba(36, 36, 36, 0))), url("/IMG3/art50ss.jpg");
+  background: linear-gradient(rgba(36, 36, 36, 0), rgba(36, 36, 36, 0)), url("/IMG3/art50ss.jpg");
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
-  background-attachment: fixed !important;
 }
 
 @media (max-width: 599px) {
   header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url("/IMG3/art50-mobile.jpg");
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("/IMG3/art50-mobile.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(36, 36, 36, 0)), to(rgba(36, 36, 36, 0))), url("/IMG3/art50-mobile.jpg");
+    background: linear-gradient(rgba(36, 36, 36, 0), rgba(36, 36, 36, 0)), url("/IMG3/art50-mobile.jpg");
   }
 }
 
@@ -84,7 +93,7 @@ main nav {
   transition: all ease-in-out 1s;
   -webkit-box-shadow: 0;
           box-shadow: 0;
-  background: #fff;
+  background: #242424;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -92,15 +101,16 @@ main nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 1.3rem;
+  color: #f2f2f2;
   z-index: 2;
 }
 
 main nav .logo {
   margin-left: 10%;
   height: 50px;
-  width: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 144;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
 main nav .logo img {
@@ -123,8 +133,9 @@ main nav ul {
   padding-bottom: 20px;
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-transition: all 1000ms ease-in-out;
-  transition: all 1000ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  padding-top: 50px;
 }
 
 @media (min-width: 900px) {
@@ -135,6 +146,7 @@ main nav ul {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
     margin-right: 10%;
+    padding-top: 0;
   }
 }
 
@@ -152,16 +164,21 @@ main nav li {
 
 main nav a {
   text-decoration: none;
-  color: black;
+  color: #f2f2f2;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+main nav a:hover {
+  color: #f2e852;
 }
 
 main nav .menuIcon {
+  padding-top: 1rem;
   width: 50px;
   height: 50px;
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
   margin-right: 10%;
-  margin-bottom: 2%;
+  position: relative;
 }
 
 @media (min-width: 900px) {
@@ -172,30 +189,49 @@ main nav .menuIcon {
 
 main nav .menuIcon .ham {
   display: block;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   width: 100%;
-  margin-top: 17%;
-  height: 15%;
-  background: red;
-  -webkit-transition: all ease-in-out .5s;
-  transition: all ease-in-out .5s;
+  height: 6px;
+  border-radius: 5px;
 }
 
-main nav .menuIcon .topA {
+main nav .menuIcon .topBar {
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-transform: translateY(1rem) rotate(-45deg);
-          transform: translateY(1rem) rotate(-45deg);
+  background: #f2f2f2;
 }
 
-main nav .menuIcon .middleA {
+main nav .menuIcon .middleBar {
+  opacity: 1;
+  margin-top: 10px;
+  background: #f2f2f2;
+}
+
+main nav .menuIcon .bottomBar {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background: #f2f2f2;
+  margin-top: 10px;
+  top: 40px;
+}
+
+main nav .menuIcon.open .topBar {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(19px) rotate(45deg);
+          transform: translateY(19px) rotate(45deg);
+  background-color: red;
+}
+
+main nav .menuIcon.open .middleBar {
   opacity: 0;
 }
 
-main nav .menuIcon .bottomA {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: translateY(-1rem) rotate(45deg);
-          transform: translateY(-1rem) rotate(45deg);
+main nav .menuIcon.open .bottomBar {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+          transform: translateY(-13px) rotate(-45deg);
+  background-color: red;
 }
 
 .showMenu {
@@ -219,10 +255,17 @@ main nav .menuIcon .bottomA {
   position: relative;
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
 /********** Articles *********/
 .articles {
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f9f9f9));
-  background: linear-gradient(#fff, #f9f9f9);
+  background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#000));
+  background: linear-gradient(#242424, #000);
   padding-bottom: 3rem;
 }
 
@@ -231,6 +274,7 @@ main nav .menuIcon .bottomA {
   font-size: 3rem;
   letter-spacing: .2rem;
   padding: 1.5rem 0 1.5rem 0;
+  color: #f2f2f2;
 }
 
 /***************************** CODE FROM https://github.com/web-tiki/responsive-grid-of-hexagons *****************/
@@ -410,7 +454,7 @@ main nav .menuIcon .bottomA {
 /**************************************************************************
 *********************** ABOUT *****************************************/
 .about {
-  background: #fdfdfd;
+  background: #242424;
 }
 
 .about .sTitle {
@@ -423,6 +467,7 @@ main nav .menuIcon .bottomA {
   font-size: 3rem;
   letter-spacing: .2rem;
   padding: 1.5rem 0 1.5rem 0;
+  color: #f2f2f2;
   padding-bottom: 0;
 }
 
@@ -508,6 +553,7 @@ main nav .menuIcon .bottomA {
   font-size: 3rem;
   letter-spacing: .2rem;
   padding: 1.5rem 0 1.5rem 0;
+  color: #f2f2f2;
   color: #f4f4f4;
   padding-bottom: .5rem;
 }
@@ -664,6 +710,7 @@ main nav .menuIcon .bottomA {
   font-size: 3rem;
   letter-spacing: .2rem;
   padding: 1.5rem 0 1.5rem 0;
+  color: #f2f2f2;
 }
 
 .contact h2 .fas {
