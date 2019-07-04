@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Tangerine|Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:700i|Montserrat|Playfair+Display:900i|Roboto|Tangerine|Vollkorn:400i|Zilla+Slab&display=swap');
+
 
 @mixin phone {
     @media (max-width: 599px) {
@@ -39,8 +40,8 @@
      font-size: 3rem;
      letter-spacing: .2rem;
      padding: 2rem 0 2rem 0;
-     color: #f2f2f2;
-     font-family: 'tangerine';
+     color: $offwhitefour;
+     font-family: 'vollkorn';
      font-weight: bold;
  }
 
@@ -57,6 +58,7 @@
 $offblack: #242424;
 $offwhitetwo: #fdfdfd;
 $offwhitethree: #f9f9f9;
+$offwhitefour: #f2f2f2;
 
 /******pic colors ******/
 $picblue: #4886d9;
@@ -78,12 +80,12 @@ $compblue: #23a1a6;
 }
 html {
     box-sizing: border-box;
-    
+    scroll-behavior: smooth;
 }
 
 body {
    
-    
+    height: 100%;
     font-family: 'Montserrat';
     
 }
@@ -93,9 +95,7 @@ body {
     
 }
 
-html {
-    scroll-behavior: smooth;
-  }
+
   
   @media (prefers-reduced-motion: reduce) {
     html {
@@ -131,7 +131,7 @@ header {
         position: relative;
         color: #f2f2f2;
         top: 30%;
-        font-family: 'tangerine';
+        font-family: 'vollkorn';
         letter-spacing: .2rem;
         font-weight: bold;
         font-size: 3.5rem;
@@ -154,6 +154,10 @@ header {
 .icon {
     width: 50px;
     height: 50px;
+}
+
+.fa, .fas, .far {
+    color: $picyellow;
 }
 
 main {
@@ -533,6 +537,11 @@ main {
 
 .about {
     
+        background: #242424;
+
+        @include tabletP {
+            background: transparent;
+        }
     
         .sTitle {
             text-align: center;
@@ -562,29 +571,35 @@ main {
     article {
 
         div {
-
-            background: transparent;
-            color: $offwhite;
+            @include tabletP {
+            min-width: 300px;
+             max-width: 500px;
+             background: #242424;
+             margin: 1rem auto 1rem auto;
+             border-radius: 19px;
+            }
 
             @include tabletL {
-            z-index: 1;
-            
-            margin: 1rem;
-            color: $offwhite;
-            margin-bottom: -7rem;
-            border-radius: 9px;
-            box-shadow:  0 3px 10px rgba(50,50,50,0.05);
-           /* box-shadow: 0px 6px 10px #000000; */
+                margin: 2rem;
             }
         }
+        
         @include tabletP {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
         }
 
         @include tabletL {
+            color: $offwhite;
+            
+            
+           
             display: flex;
             flex: 1;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            
 
         }
 
@@ -632,9 +647,7 @@ main {
         @include sectionHeading;
         color: $offwhite;
         padding-bottom: .5rem;
-        .fas {
-            color: #4886d9;
-        }
+        
     }
 
     h3 {
@@ -661,7 +674,7 @@ main {
 *********************** Contact *****************************************/
 
 .contact {
-    background: $offblack;
+    
     color: $offwhite;
     .padding {
         padding: 0 15px 0 15px;
@@ -683,12 +696,12 @@ main {
     .contactTop {
 
         .phone {
-            color: #4886d9;
+            color: $picyellow;
             font-size: 2rem;
         }
 
         a:hover {
-            color: #4886d9;
+            transform: scale(1.1);
         }
         
         @include tabletP {
@@ -770,10 +783,7 @@ main {
 
     h2 {
         @include sectionHeading;
-        .fas {
-        color: #4886d9;
-
-        }
+        
     }
 
     p {
