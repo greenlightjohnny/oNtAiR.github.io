@@ -243,6 +243,19 @@ main {
             
             margin-right: 10%;
             position: relative;
+
+            button {
+                height: 50px;
+                width: 50px;
+                background: transparent;
+                border: none;
+
+                
+            }
+            :focus {
+                outline: 0;
+            }
+
             
 
             @include tabletL {

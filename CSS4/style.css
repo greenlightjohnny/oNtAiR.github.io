@@ -183,6 +183,17 @@ main nav .menuIcon {
   position: relative;
 }
 
+main nav .menuIcon button {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border: none;
+}
+
+main nav .menuIcon :focus {
+  outline: 0;
+}
+
 @media (min-width: 900px) {
   main nav .menuIcon {
     display: none;
