@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:700i|Montserrat|Playfair+Display:900i|Roboto|Tangerine|Vollkorn:400i|Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:700i|Montserrat&display=swap');
 
 
 @mixin phone {
@@ -41,7 +41,7 @@
      letter-spacing: .2rem;
      padding: 2rem 0 2rem 0;
      color: $offwhitefour;
-     font-family: 'vollkorn';
+     font-family: 'lato';
      font-weight: bold;
  }
 
@@ -131,7 +131,7 @@ header {
         position: relative;
         color: #f2f2f2;
         top: 30%;
-        font-family: 'vollkorn';
+        font-family: 'lato';
         letter-spacing: .2rem;
         font-weight: bold;
         font-size: 3.5rem;
