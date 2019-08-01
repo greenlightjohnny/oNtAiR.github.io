@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:700i|Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Grenze|Montserrat|Open+Sans|Saira+Stencil+One&display=swap");
 /******pic colors ******/
 * {
   margin: 0;
@@ -32,8 +32,8 @@ header {
   width: 100%;
   min-width: 100%;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(36, 36, 36, 0)), to(rgba(36, 36, 36, 0))), url("/IMG3/art50ss.jpg");
-  background: linear-gradient(rgba(36, 36, 36, 0), rgba(36, 36, 36, 0)), url("/IMG3/art50ss.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), url("/IMG3/art50ss.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/IMG3/art50ss.jpg");
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
@@ -41,8 +41,8 @@ header {
 
 @media (max-width: 599px) {
   header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(36, 36, 36, 0)), to(rgba(36, 36, 36, 0))), url("/IMG3/art50-mobile.jpg");
-    background: linear-gradient(rgba(36, 36, 36, 0), rgba(36, 36, 36, 0)), url("/IMG3/art50-mobile.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), url("/IMG3/art50-mobile.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/IMG3/art50-mobile.jpg");
   }
 }
 
@@ -55,7 +55,7 @@ header h1 {
   position: relative;
   color: #f2f2f2;
   top: 30%;
-  font-family: 'lato';
+  font-family: 'montserrat';
   letter-spacing: .2rem;
   font-weight: bold;
   font-size: 3.5rem;
@@ -95,7 +95,7 @@ main nav {
   transition: all ease-in-out 1s;
   -webkit-box-shadow: 0;
           box-shadow: 0;
-  background: #242424;
+  background: #000;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -176,15 +176,16 @@ main nav a:hover {
 }
 
 main nav .menuIcon {
-  padding-top: 1rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 50px;
-  height: 50px;
+  height: 40px;
   margin-right: 10%;
   position: relative;
 }
 
 main nav .menuIcon button {
-  height: 50px;
+  height: 40px;
   width: 50px;
   background: transparent;
   border: none;
@@ -217,7 +218,7 @@ main nav .menuIcon .topBar {
 
 main nav .menuIcon .middleBar {
   opacity: 1;
-  margin-top: 10px;
+  margin-top: 11px;
   background: #f2f2f2;
 }
 
@@ -225,8 +226,7 @@ main nav .menuIcon .bottomBar {
   -webkit-transform-origin: center;
           transform-origin: center;
   background: #f2f2f2;
-  margin-top: 10px;
-  top: 40px;
+  margin-top: 11px;
 }
 
 main nav .menuIcon.open .topBar {
@@ -242,8 +242,8 @@ main nav .menuIcon.open .middleBar {
 }
 
 main nav .menuIcon.open .bottomBar {
-  -webkit-transform: translateY(-13px) rotate(-45deg);
-          transform: translateY(-13px) rotate(-45deg);
+  -webkit-transform: translateY(-15px) rotate(-45deg);
+          transform: translateY(-15px) rotate(-45deg);
   background-color: red;
 }
 
@@ -280,6 +280,7 @@ main nav .menuIcon.open .bottomBar {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#0c0c0c));
   background-image: linear-gradient(#242424, #0c0c0c);
   padding-bottom: 3rem;
+  display: none;
 }
 
 #tt {
@@ -288,8 +289,7 @@ main nav .menuIcon.open .bottomBar {
   letter-spacing: .2rem;
   padding: 2rem 0 2rem 0;
   color: #f2f2f2;
-  font-family: 'lato';
-  font-weight: bold;
+  font-family: 'montserrat';
 }
 
 /***************************** CODE FROM https://github.com/web-tiki/responsive-grid-of-hexagons *****************/
@@ -469,13 +469,8 @@ main nav .menuIcon.open .bottomBar {
 /**************************************************************************
 *********************** ABOUT *****************************************/
 .about {
-  background: #242424;
-}
-
-@media (min-width: 600px) {
-  .about {
-    background: transparent;
-  }
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(#020101), color-stop(#040302), color-stop(#040402), to(#040604));
+  background-image: linear-gradient(to bottom, #000000, #020101, #040302, #040402, #040604);
 }
 
 .about .sTitle {
@@ -489,8 +484,7 @@ main nav .menuIcon.open .bottomBar {
   letter-spacing: .2rem;
   padding: 2rem 0 2rem 0;
   color: #f2f2f2;
-  font-family: 'lato';
-  font-weight: bold;
+  font-family: 'montserrat';
   padding-bottom: 0;
 }
 
@@ -504,14 +498,16 @@ main nav .menuIcon.open .bottomBar {
   padding-top: 1rem;
   text-align: center;
   font-size: 2rem;
+  font-family: 'Montserrat';
   color: #f4f4f4;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 600px) {
   .about article div {
     min-width: 300px;
     max-width: 500px;
-    background: #242424;
+    background: transparent;
     margin: 1rem auto 1rem auto;
     border-radius: 19px;
   }
@@ -559,7 +555,7 @@ main nav .menuIcon.open .bottomBar {
 
 @media (min-width: 900px) {
   .store {
-    padding-top: 7rem;
+    padding-top: 3rem;
   }
 }
 
@@ -585,17 +581,19 @@ main nav .menuIcon.open .bottomBar {
   letter-spacing: .2rem;
   padding: 2rem 0 2rem 0;
   color: #f2f2f2;
-  font-family: 'lato';
-  font-weight: bold;
+  font-family: 'montserrat';
   color: #f4f4f4;
   padding-bottom: .5rem;
+  padding-top: 1rem;
 }
 
 .store h3 {
   text-align: center;
   font-size: 2rem;
-  color: #f4f4f4;
+  font-family: 'Montserrat';
+  color: #242424;
   font-size: 1.8rem;
+  padding-top: .5rem;
 }
 
 .store h3 .some {
@@ -604,13 +602,69 @@ main nav .menuIcon.open .bottomBar {
 }
 
 .store p {
-  color: #f4f4f4;
+  color: #242424;
   line-height: 1.7rem;
   padding: 5px 15px 30px 15px;
 }
 
 .bgC {
   background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
+}
+
+.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.items .imgc {
+  width: 100%;
+  height: auto;
+}
+
+.items .imgc img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.items .card {
+  max-width: 500px;
+  min-width: 300px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .items .card {
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .items .card {
+    margin: 2rem;
+  }
 }
 
 /**************************************************************************
@@ -744,8 +798,7 @@ main nav .menuIcon.open .bottomBar {
   letter-spacing: .2rem;
   padding: 2rem 0 2rem 0;
   color: #f2f2f2;
-  font-family: 'lato';
-  font-weight: bold;
+  font-family: 'montserrat';
 }
 
 .contact p {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:700i|Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Grenze|Montserrat|Open+Sans|Saira+Stencil+One&display=swap');
 
 
 @mixin phone {
@@ -41,17 +41,19 @@
      letter-spacing: .2rem;
      padding: 2rem 0 2rem 0;
      color: $offwhitefour;
-     font-family: 'lato';
-     font-weight: bold;
+     font-family: 'montserrat';
+     
  }
 
  @mixin paragraphPadding {
     padding: 5px 15px 30px 15px;
+    
 }
 
 @mixin subHeading {
     text-align: center;
     font-size: 2rem;
+    font-family: 'Montserrat';
 }
 
  $offwhite: #f4f4f4;
@@ -110,14 +112,14 @@ header {
     width: 100%;
     min-width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(36, 36, 36, 0), rgba(36, 36, 36, 0)), url('/IMG3/art50ss.jpg'); 
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/IMG3/art50ss.jpg'); 
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: cover !important;
     
 
     @include phone {
-       background: linear-gradient(rgba(36, 36, 36, 0), rgba(36, 36, 36, 0)), url('/IMG3/art50-mobile.jpg');
+       background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/IMG3/art50-mobile.jpg');
     }
 
     img {
@@ -131,7 +133,7 @@ header {
         position: relative;
         color: #f2f2f2;
         top: 30%;
-        font-family: 'lato';
+        font-family:  'montserrat';
         letter-spacing: .2rem;
         font-weight: bold;
         font-size: 3.5rem;
@@ -168,7 +170,7 @@ main {
         display: flex;
         transition: all ease-in-out 1s;
         box-shadow: 0;
-        background: #242424;
+        background: #000;
         flex: 1;
         justify-content: space-between;
         font-size: 1.3rem;
@@ -237,15 +239,16 @@ main {
         }
 
         .menuIcon {
-            padding-top: 1rem;
+            margin-top: 15px;
+            margin-bottom: 15px;
             width: 50px;
-            height: 50px;
+            height: 40px;
             
             margin-right: 10%;
             position: relative;
 
             button {
-                height: 50px;
+                height: 40px;
                 width: 50px;
                 background: transparent;
                 border: none;
@@ -281,15 +284,15 @@ main {
             .middleBar {
                 opacity: 1;
                 
-                margin-top: 10px;
+                margin-top: 11px;
                 background: #f2f2f2;
             }
     
             .bottomBar {
                 transform-origin: center;
                 background: #f2f2f2;
-                margin-top: 10px;
-                top: 40px;
+                
+                margin-top: 11px;
                 
             }
 
@@ -305,7 +308,7 @@ main {
                 }
 
                 .bottomBar {
-                    transform: translateY(-13px) rotate(-45deg);
+                    transform: translateY(-15px) rotate(-45deg);
                     background-color: red;
                 }
             }
@@ -354,6 +357,7 @@ main {
 .articles {
     background-image: linear-gradient(#242424, #0c0c0c);
     padding-bottom: 3rem;
+    display: none;
 }
 #tt {
     @include sectionHeading;
@@ -550,10 +554,10 @@ main {
 
 .about {
     
-        background: #242424;
+    background-image: linear-gradient(to bottom, #000000, #020101, #040302, #040402, #040604);
 
         @include tabletP {
-            background: transparent;
+            
         }
     
         .sTitle {
@@ -577,6 +581,7 @@ main {
         padding-top: 1rem;
         @include subHeading;
         color: $offwhite;
+        padding-bottom: 1rem;
        
     }
     
@@ -587,7 +592,7 @@ main {
             @include tabletP {
             min-width: 300px;
              max-width: 500px;
-             background: #242424;
+             background: transparent;
              margin: 1rem auto 1rem auto;
              border-radius: 19px;
             }
@@ -630,7 +635,7 @@ main {
 
 
     @include tabletL {
-        padding-top: 7rem;
+        padding-top: 3rem;
     }
 
     .storeTop {
@@ -660,13 +665,15 @@ main {
         @include sectionHeading;
         color: $offwhite;
         padding-bottom: .5rem;
+        padding-top: 1rem;
         
     }
 
     h3 {
         @include subHeading;
-        color: $offwhite;
+        color: $offblack;
         font-size: 1.8rem;
+        padding-top: .5rem;
         .some {
             font-size: 1.3rem;
             letter-spacing: .1rem;
@@ -674,7 +681,7 @@ main {
     }
 
     p {
-        color: $offwhite;
+        color: $offblack;
         line-height: 1.7rem;
         @include paragraphPadding;
     }
@@ -682,6 +689,44 @@ main {
 
 .bgC {
     background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
+}
+
+.items {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+    .imgc {
+        width: 100%;
+        height: auto;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+    }
+
+    .card {
+        max-width: 500px;
+        min-width: 300px;
+        border-radius: 10px;
+        background-color: $offwhite;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        @include tabletP {
+            margin: 1rem;
+        }
+
+        @include tabletL {
+            margin: 2rem;
+        }
+    }
 }
 /**************************************************************************
 *********************** Contact *****************************************/

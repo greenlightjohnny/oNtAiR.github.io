@@ -6,12 +6,12 @@ function fadeOnScroll() {
         const opacity = (window.pageYOffset / opacityAnchor);
         
         const beeBackground = document.querySelector('header');
-        beeBackground.style.background = "linear-gradient(rgba(36, 36, 36, " + (opacity / 2) + "), rgba(36, 36, 36, " + (opacity) + ")), url('./IMG3/art50ss.jpg')";
+        beeBackground.style.background = "linear-gradient(rgba(0, 0, 0, " + (opacity / 2) + "), rgba(0, 0, 0, " + (opacity) + ")), url('./IMG3/art50ss.jpg')";
     } else if(window.pageYOffset >= 0 & window.innerWidth <= 599) {
         const opacity = (window.pageYOffset / opacityAnchor);
         
         const beeBackground = document.querySelector('header');
-        beeBackground.style.background = "linear-gradient(rgba(36, 36, 36, " + (opacity / 2) + "), rgba(36, 36, 36, " + (opacity) + ")), url('./IMG3/art50-mobile.jpg')", "background-position: center", "background-size: cover", "background-repeat: no-repeat";
+        beeBackground.style.background = "linear-gradient(rgba(0, 0, 0, " + (opacity / 2) + "), rgba(0, 0, 0, " + (opacity) + ")), url('./IMG3/art50-mobile.jpg')", "background-position: center", "background-size: cover", "background-repeat: no-repeat";
     }
 }
 
