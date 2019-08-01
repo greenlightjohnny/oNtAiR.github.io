@@ -32,8 +32,8 @@ header {
   width: 100%;
   min-width: 100%;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), url("/IMG3/art50ss.jpg");
-  background: linear-gradient(white, white), url("/IMG3/art50ss.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url("/IMG3/art50ss.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("/IMG3/art50ss.jpg");
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
@@ -41,8 +41,8 @@ header {
 
 @media (max-width: 599px) {
   header {
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), url("/IMG3/art50-mobile.jpg");
-    background: linear-gradient(white, white), url("/IMG3/art50-mobile.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url("/IMG3/art50-mobile.jpg");
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("/IMG3/art50-mobile.jpg");
   }
 }
 
