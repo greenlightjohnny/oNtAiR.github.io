@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Grenze|Montserrat|Open+Sans|Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 /******pic colors ******/
 * {
   margin: 0;
@@ -32,8 +32,8 @@ header {
   width: 100%;
   min-width: 100%;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), url("/IMG3/art50ss.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/IMG3/art50ss.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), url("/IMG3/art50ss.jpg");
+  background: linear-gradient(white, white), url("/IMG3/art50ss.jpg");
   background-repeat: no-repeat !important;
   background-position: center center !important;
   background-size: cover !important;
@@ -41,8 +41,8 @@ header {
 
 @media (max-width: 599px) {
   header {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), url("/IMG3/art50-mobile.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/IMG3/art50-mobile.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), url("/IMG3/art50-mobile.jpg");
+    background: linear-gradient(white, white), url("/IMG3/art50-mobile.jpg");
   }
 }
 
@@ -95,7 +95,7 @@ main nav {
   transition: all ease-in-out 1s;
   -webkit-box-shadow: 0;
           box-shadow: 0;
-  background: #000;
+  background: white;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -103,7 +103,7 @@ main nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 1.3rem;
-  color: #f2f2f2;
+  color: #242424;
   z-index: 2;
 }
 
@@ -166,7 +166,7 @@ main nav li {
 
 main nav a {
   text-decoration: none;
-  color: #f2f2f2;
+  color: #242424;
   -webkit-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
 }
