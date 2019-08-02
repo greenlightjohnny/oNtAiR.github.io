@@ -469,8 +469,7 @@ main nav .menuIcon.open .bottomBar {
 /**************************************************************************
 *********************** ABOUT *****************************************/
 .about {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(#020101), color-stop(#040302), color-stop(#040402), to(#040604));
-  background-image: linear-gradient(to bottom, #000000, #020101, #040302, #040402, #040604);
+  background-image: radial-gradient(circle at top, #fff, #f5f5f5);
 }
 
 .about .sTitle {
@@ -478,7 +477,6 @@ main nav .menuIcon.open .bottomBar {
 }
 
 .about h2 {
-  color: #242424;
   text-align: center;
   font-size: 3rem;
   letter-spacing: .2rem;
@@ -486,11 +484,12 @@ main nav .menuIcon.open .bottomBar {
   color: #f2f2f2;
   font-family: 'montserrat';
   padding-bottom: 0;
+  color: #242424;
 }
 
 .about p {
   line-height: 1.7rem;
-  color: #f4f4f4;
+  color: #242424;
   padding: 5px 15px 30px 15px;
 }
 
@@ -499,7 +498,7 @@ main nav .menuIcon.open .bottomBar {
   text-align: center;
   font-size: 2rem;
   font-family: 'Montserrat';
-  color: #f4f4f4;
+  color: #242424;
   padding-bottom: 1rem;
 }
 
@@ -507,9 +506,11 @@ main nav .menuIcon.open .bottomBar {
   .about article div {
     min-width: 300px;
     max-width: 500px;
-    background: transparent;
+    background: #fff;
     margin: 1rem auto 1rem auto;
     border-radius: 19px;
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -551,6 +552,7 @@ main nav .menuIcon.open .bottomBar {
 *********************** STORE *****************************************/
 .store {
   padding-bottom: 4rem;
+  background: #fff;
 }
 
 @media (min-width: 900px) {
@@ -582,7 +584,7 @@ main nav .menuIcon.open .bottomBar {
   padding: 2rem 0 2rem 0;
   color: #f2f2f2;
   font-family: 'montserrat';
-  color: #f4f4f4;
+  color: #242424;
   padding-bottom: .5rem;
   padding-top: 1rem;
 }

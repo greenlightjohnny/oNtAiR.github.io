@@ -554,7 +554,7 @@ main {
 
 .about {
     
-    background-image: linear-gradient(to bottom, #000000, #020101, #040302, #040402, #040604);
+    background-image: radial-gradient(circle at top, #fff, #f5f5f5);
 
         @include tabletP {
             
@@ -566,21 +566,22 @@ main {
     
 
     h2 {
-        color: $offblack;
+        
         @include sectionHeading;
         padding-bottom: 0;
+        color: $offblack;
     }
 
     p {
         line-height: 1.7rem;
-        color: $offwhite;
+        color: $offblack;
         @include paragraphPadding;
     }
 
     h3 {
         padding-top: 1rem;
         @include subHeading;
-        color: $offwhite;
+        color: $offblack;
         padding-bottom: 1rem;
        
     }
@@ -592,9 +593,10 @@ main {
             @include tabletP {
             min-width: 300px;
              max-width: 500px;
-             background: transparent;
+             background: #fff;
              margin: 1rem auto 1rem auto;
              border-radius: 19px;
+             box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
             }
 
             @include tabletL {
@@ -630,7 +632,7 @@ main {
 .store {
     
     padding-bottom: 4rem;
-
+    background: #fff;
 
 
 
@@ -663,7 +665,7 @@ main {
     
     h2 {
         @include sectionHeading;
-        color: $offwhite;
+        color: $offblacka;
         padding-bottom: .5rem;
         padding-top: 1rem;
         
