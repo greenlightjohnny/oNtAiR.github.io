@@ -13,7 +13,7 @@ function fadeOnScroll() {
         const beeBackground = document.querySelector('header');
         beeBackground.style.background = "linear-gradient(rgba(253, 253, 253, " + (opacity / 2) + "), rgba(253, 253, 253, " + (opacity) + ")), url('./IMG3/art50-mobile.jpg')", "background-position: center", "background-size: cover", "background-repeat: no-repeat";
     }
-}
+} 
 
 window.addEventListener('scroll', fadeOnScroll);
 window.addEventListener('resize', fadeOnScroll);
