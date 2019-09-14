@@ -163,6 +163,9 @@ header {
 .fa, .fas, .far {
     color: $picyellow;
 }
+.backgroundOpacity {
+    background: rgba(253, 253, 253, .9);
+}
 
 main {
     
@@ -173,7 +176,7 @@ main {
         
         transition: all ease-in-out 1s;
         box-shadow: 0;
-        background: #fdfdfd;
+        background: rgba(253, 253, 253, 1);
         
         font-size: 1.3rem;
         color: $offblack;
@@ -222,6 +225,7 @@ main {
                 transform: scaleY(1);
                 margin-right: 10%;
                 padding-top: 0;
+                
             }
         }
 

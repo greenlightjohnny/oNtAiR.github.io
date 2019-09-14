@@ -87,6 +87,10 @@ header h1 {
   color: #f2e852;
 }
 
+.backgroundOpacity {
+  background: rgba(253, 253, 253, 0.9);
+}
+
 main nav {
   display: -webkit-box;
   display: -ms-flexbox;

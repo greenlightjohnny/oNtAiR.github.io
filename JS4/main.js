@@ -28,16 +28,18 @@ let menu = document.querySelector(".menuIcon");
 let menuList = document.querySelector("nav ul");
 const menuT = document.querySelector(".ham");
 const menuItems = document.querySelectorAll('nav li a');
+const mainMav = document.querySelector('nav');
 
-console.log(menuItems);
+
+
 
 function menuToggle() {
     menuList.classList.toggle('showMenu');
     menu.classList.toggle('menuMove');
-    
+    mainMav.classList.toggle('backgroundOpacity');
 
     menu.classList.toggle('open');
-    console.log(this)
+    
 
 }
 menu.addEventListener('click', menuToggle)
