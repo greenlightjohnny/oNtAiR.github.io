@@ -284,8 +284,14 @@ main nav .menuIcon.open .bottomBar {
 .anchor {
   display: block;
   position: relative;
-  top: -100px;
+  top: -250px;
   visibility: hidden;
+}
+
+@media (min-width: 900px) {
+  .anchor {
+    top: -100px;
+  }
 }
 
 /********** Articles *********/
@@ -885,9 +891,11 @@ main nav .menuIcon.open .bottomBar {
   width: 100%;
   margin-bottom: 5%;
   border-radius: 7px;
-  font-size: 2rem;
+  font-size: 1.2rem;
+  padding: 4px;
   border-style: outset;
   font-family: 'montserrat';
+  margin-top: 2%;
 }
 
 .contact #button {
@@ -897,6 +905,7 @@ main nav .menuIcon.open .bottomBar {
   font-weight: bold;
   color: #000;
   margin-bottom: 0;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
@@ -913,9 +922,12 @@ main nav .menuIcon.open .bottomBar {
 .contact textarea {
   width: 100%;
   margin-bottom: 5%;
-  font-size: 2rem;
+  font-size: 1.2rem;
   border-radius: 10px;
   min-height: 5rem;
+  padding: 5px;
+  font-family: 'montserrat';
+  margin-top: 2%;
 }
 
 .contact h2 {
