@@ -769,12 +769,13 @@ main {
     a {
         text-align: center;
         margin: auto;
-        font-size: 1.4rem;
-        text-transform: uppercase;
+        font-size: 1.6rem;
+        letter-spacing: .1rem;
+        
         text-decoration: none;
-        width: 150px;
-        height: 50px;
-        line-height: 50px;
+        width: 12rem;
+        height: 39px;
+        line-height: 39px;
         border-radius: 20px;
         font-weight: bold;
         transition: all 200ms ease-in-out;
@@ -814,9 +815,7 @@ main {
             transition: all .3s ease-in-out;
         }
 
-        img:hover {
-            transform: scale(1.1);
-        }
+        
     }
 
     .card {
@@ -840,6 +839,10 @@ main {
         @include tabletL {
             margin: 2rem;
         }
+    }
+
+    .card:hover img{
+        transform: scale(1.1);
     }
 }
 /**************************************************************************
@@ -934,10 +937,13 @@ main {
         border: none;
         border-radius: 20px;
         font-weight: bold;
+        letter-spacing: .1rem;
+        
         color: #000;
         margin-bottom: 0;
         font-size: 1.6rem;
         cursor: pointer;
+        transition: all 200ms ease-in-out;
         
         
 
@@ -947,9 +953,13 @@ main {
 
         #button:hover {
             cursor: pointer;
+           
         }
     }
 
+    #button:hover {
+        box-shadow: 0 0 10px 0 $newyellow inset, 0 0 10px 4px $newyellow;
+    }
     textarea {
         width: 100%;
         margin-bottom: 5%;

@@ -713,12 +713,12 @@ main nav .menuIcon.open .bottomBar {
 .items a {
   text-align: center;
   margin: auto;
-  font-size: 1.4rem;
-  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
   text-decoration: none;
-  width: 150px;
-  height: 50px;
-  line-height: 50px;
+  width: 12rem;
+  height: 39px;
+  line-height: 39px;
   border-radius: 20px;
   font-weight: bold;
   -webkit-transition: all 200ms ease-in-out;
@@ -760,11 +760,6 @@ main nav .menuIcon.open .bottomBar {
   transition: all .3s ease-in-out;
 }
 
-.items .imgc img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .items .card {
   max-width: 500px;
   min-width: 300px;
@@ -797,6 +792,11 @@ main nav .menuIcon.open .bottomBar {
   .items .card {
     margin: 2rem;
   }
+}
+
+.items .card:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /**************************************************************************
@@ -903,10 +903,13 @@ main nav .menuIcon.open .bottomBar {
   border: none;
   border-radius: 20px;
   font-weight: bold;
+  letter-spacing: .1rem;
   color: #000;
   margin-bottom: 0;
   font-size: 1.6rem;
   cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 @media (min-width: 600px) {
@@ -917,6 +920,11 @@ main nav .menuIcon.open .bottomBar {
 
 .contact #button #button:hover {
   cursor: pointer;
+}
+
+.contact #button:hover {
+  -webkit-box-shadow: 0 0 10px 0 #4886d9 inset, 0 0 10px 4px #4886d9;
+          box-shadow: 0 0 10px 0 #4886d9 inset, 0 0 10px 4px #4886d9;
 }
 
 .contact textarea {
