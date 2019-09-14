@@ -760,6 +760,12 @@ main nav .menuIcon.open .bottomBar {
   transition: all .3s ease-in-out;
 }
 
+@media (orientation: landscape) {
+  .items .imgc img {
+    width: auto;
+  }
+}
+
 .items .card {
   max-width: 500px;
   min-width: 300px;
@@ -780,6 +786,14 @@ main nav .menuIcon.open .bottomBar {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+@media (orientation: landscape) {
+  .items .card {
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+  }
 }
 
 @media (min-width: 600px) {

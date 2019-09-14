@@ -18,7 +18,7 @@ function fadeOnScroll() {
 window.addEventListener('scroll', fadeOnScroll);
 window.addEventListener('resize', fadeOnScroll);
 
-
+ 
 
 
 

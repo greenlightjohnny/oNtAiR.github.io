@@ -813,9 +813,15 @@ main {
             border-top-right-radius: 10px;
             border-top-left-radius: 10px;
             transition: all .3s ease-in-out;
+
+            @media (orientation: landscape) {
+                
+                width: auto;
+                
+            }
         }
 
-        
+    
     }
 
     .card {
@@ -830,6 +836,10 @@ main {
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         margin-top: 1rem;
         margin-bottom: 1rem;
+
+        @media (orientation: landscape) {
+            max-height: max-content;
+        }
 
         
         @include tabletP {
