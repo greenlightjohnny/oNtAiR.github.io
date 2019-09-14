@@ -123,6 +123,8 @@ main nav .logo img {
   display: inline-block;
   height: 100%;
   max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 main nav ul {
