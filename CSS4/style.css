@@ -496,7 +496,6 @@ main nav .menuIcon.open .bottomBar {
 .about {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), color-stop(#fbfbfb), color-stop(#f9f9f9), color-stop(#f7f7f7), to(#f5f5f5));
   background-image: linear-gradient(to bottom, #fdfdfd, #fbfbfb, #f9f9f9, #f7f7f7, #f5f5f5);
-  padding-bottom: 3rem;
 }
 
 @media (min-width: 900px) {
@@ -545,6 +544,7 @@ main nav .menuIcon.open .bottomBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-height: 50vh;
 }
 
 .about .centert .flex .pic img {
@@ -564,10 +564,10 @@ main nav .menuIcon.open .bottomBar {
   .about .centert .flex:nth-child(even) p, .about .centert .flex:nth-child(even) h2 {
     padding-right: 10%;
     padding-left: 4rem;
+    color: #f4f4f4;
   }
   .about .centert .flex:nth-child(even) .text {
-    background: #3c56ee;
-    color: #f4f4f4;
+    background: #242424;
   }
 }
 
