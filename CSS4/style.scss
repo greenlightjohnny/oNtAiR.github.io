@@ -576,6 +576,92 @@ main {
 
 
 .about {
+
+    .centert {
+        .flex {
+    
+            @include tabletL {
+                display: flex;
+            flex-wrap: wrap;
+            
+            div {
+                flex: 1 1 0;
+            }
+            }
+            
+        
+            .text {
+        
+                
+                
+                p { 
+                    padding: 1rem;
+                    padding-top: 1.5rem;
+                    font-family: 'Montserrat';
+                    
+                    font-size: 1.2rem;
+                    line-height: 1.7rem;
+                    @include tabletL {
+                        max-width: 500px;
+                    }
+                }
+                h2 {
+                    padding-top: 2rem;
+                    text-align: center;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+    
+                    @include tabletL {
+                        max-width: 500px;
+                    
+                    
+                    }
+                    
+                }
+        
+                
+            }
+        
+            .pic {
+                display: flex;
+                
+                
+        
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+        }
+        
+        @include tabletL {
+            .flex:nth-child(odd) {
+            
+                p, h2 {
+                    padding-left: 10%;
+                    padding-right: 4rem;
+                    margin-left: auto;
+                }
+            }
+            
+            .flex:nth-child(even) {
+                
+                p, h2 {
+                    padding-right: 10%;
+                padding-left: 4rem;
+                }
+
+                .text {
+                    background: #3c56ee;
+                    color: #f4f4f4;
+                }
+            }
+        
+        }
+        
+    }
     
     background-image: linear-gradient(to bottom, #fdfdfd, #fbfbfb, #f9f9f9, #f7f7f7, #f5f5f5);
     padding-bottom: 3rem;
@@ -604,17 +690,7 @@ main {
     }
 
 
-    h2:before, h2:after {
-        content: '';
-        border-top: 5px solid;
-        flex: 1 0 20px;
-        margin: 0 20px 0 20px;
-        color: $newyellow;
-    }
-
-    h2:after {
-        margin: 0 20px 0 20px;
-    }
+    
     p {
         line-height: 1.7rem;
         color: $offblack;
@@ -721,17 +797,7 @@ main {
     }
 
 
-    h2:before, h2:after {
-        content: '';
-        border-top: 5px solid;
-        flex: 1 0 20px;
-        margin: 0 20px 0 20px;
-        color: $newyellow;
-    }
-
-    h2:after {
-        margin: 0 20px 0 20px;
-    }
+    
 
     h3 {
         @include subHeading;
@@ -990,6 +1056,7 @@ main {
 
     h2 {
         @include sectionHeading;
+        padding-top: 4rem;
         
     }
 

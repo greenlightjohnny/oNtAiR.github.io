@@ -499,6 +499,78 @@ main nav .menuIcon.open .bottomBar {
   padding-bottom: 3rem;
 }
 
+@media (min-width: 900px) {
+  .about .centert .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .centert .flex div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+}
+
+.about .centert .flex .text p {
+  padding: 1rem;
+  padding-top: 1.5rem;
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+@media (min-width: 900px) {
+  .about .centert .flex .text p {
+    max-width: 500px;
+  }
+}
+
+.about .centert .flex .text h2 {
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 900px) {
+  .about .centert .flex .text h2 {
+    max-width: 500px;
+  }
+}
+
+.about .centert .flex .pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about .centert .flex .pic img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .about .centert .flex:nth-child(odd) p, .about .centert .flex:nth-child(odd) h2 {
+    padding-left: 10%;
+    padding-right: 4rem;
+    margin-left: auto;
+  }
+  .about .centert .flex:nth-child(even) p, .about .centert .flex:nth-child(even) h2 {
+    padding-right: 10%;
+    padding-left: 4rem;
+  }
+  .about .centert .flex:nth-child(even) .text {
+    background: #3c56ee;
+    color: #f4f4f4;
+  }
+}
+
 .about .sTitle {
   text-align: center;
 }
@@ -523,20 +595,6 @@ main nav .menuIcon.open .bottomBar {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-.about h2:before, .about h2:after {
-  content: '';
-  border-top: 5px solid;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20px;
-          flex: 1 0 20px;
-  margin: 0 20px 0 20px;
-  color: #4886d9;
-}
-
-.about h2:after {
-  margin: 0 20px 0 20px;
 }
 
 .about p {
@@ -651,20 +709,6 @@ main nav .menuIcon.open .bottomBar {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-.store h2:before, .store h2:after {
-  content: '';
-  border-top: 5px solid;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20px;
-          flex: 1 0 20px;
-  margin: 0 20px 0 20px;
-  color: #4886d9;
-}
-
-.store h2:after {
-  margin: 0 20px 0 20px;
 }
 
 .store h3 {
@@ -965,6 +1009,7 @@ main nav .menuIcon.open .bottomBar {
   padding: 2rem 0 2rem 0;
   color: #f2f2f2;
   font-family: 'montserrat';
+  padding-top: 4rem;
 }
 
 .contact p {
