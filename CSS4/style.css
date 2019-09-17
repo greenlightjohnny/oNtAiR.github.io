@@ -174,8 +174,12 @@ main nav li {
 @media (min-width: 900px) {
   main nav li {
     display: inline-block;
-    margin-left: 1rem;
+    margin-left: 1%;
   }
+}
+
+main nav li:first-child {
+  margin-left: 0;
 }
 
 main nav a {
@@ -530,13 +534,14 @@ main nav .menuIcon.open .bottomBar {
 .about .centert .flex .text h2 {
   padding-top: 2rem;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
 }
 
 @media (min-width: 900px) {
   .about .centert .flex .text h2 {
     max-width: 500px;
+    text-align: left;
   }
 }
 
@@ -556,13 +561,28 @@ main nav .menuIcon.open .bottomBar {
 }
 
 @media (min-width: 900px) {
-  .about .centert .flex:nth-child(odd) p, .about .centert .flex:nth-child(odd) h2 {
+  .about .centert .flex:nth-child(odd) p {
     padding-left: 10%;
     padding-right: 4rem;
     margin-left: auto;
   }
-  .about .centert .flex:nth-child(even) p, .about .centert .flex:nth-child(even) h2 {
+  .about .centert .flex:nth-child(odd) h2 {
+    margin-left: auto;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    padding-left: 10%;
+  }
+  .about .centert .flex:nth-child(even) p {
     padding-right: 10%;
+    padding-left: 4rem;
+    color: #f4f4f4;
+  }
+  .about .centert .flex:nth-child(even) h2 {
+    margin-right: auto;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
     padding-left: 4rem;
     color: #f4f4f4;
   }
@@ -598,9 +618,9 @@ main nav .menuIcon.open .bottomBar {
 }
 
 .about p {
-  line-height: 1.7rem;
   color: #242424;
   padding: 5px 15px 30px 15px;
+  padding-top: 0;
 }
 
 .about h3 {
@@ -765,6 +785,7 @@ main nav .menuIcon.open .bottomBar {
   margin: auto;
   font-size: 1.6rem;
   letter-spacing: .1rem;
+  background: #3c56ee;
   text-decoration: none;
   width: 12rem;
   height: 39px;
@@ -773,17 +794,19 @@ main nav .menuIcon.open .bottomBar {
   font-weight: bold;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  -webkit-box-shadow: 0 0 40px 40px #4886d9 inset, 0 0 0 0 #4886d9;
-          box-shadow: 0 0 40px 40px #4886d9 inset, 0 0 0 0 #4886d9;
   margin-bottom: 1rem;
-  color: #000;
+  color: #f2f2f2;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .items a:hover {
-  -webkit-box-shadow: 0 0 10px 0 #4886d9 inset, 0 0 10px 4px #4886d9;
-          box-shadow: 0 0 10px 0 #4886d9 inset, 0 0 10px 4px #4886d9;
+  -webkit-box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate(0px, -10px);
+          transform: translate(0px, -10px);
 }
 
 .items .imgc {
@@ -963,12 +986,12 @@ main nav .menuIcon.open .bottomBar {
 }
 
 .contact #button {
-  background: #4886d9;
+  background: #3c56ee;
   border: none;
   border-radius: 20px;
   font-weight: bold;
   letter-spacing: .1rem;
-  color: #000;
+  color: #f2f2f2;
   margin-bottom: 0;
   font-size: 1.6rem;
   cursor: pointer;
@@ -1030,5 +1053,7 @@ footer div {
   padding-bottom: 2rem;
   padding-top: 2rem;
   text-align: center;
+  font-size: .8rem;
+  color: #969699;
 }
 /*# sourceMappingURL=style.css.map */

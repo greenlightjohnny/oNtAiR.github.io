@@ -234,12 +234,18 @@ main {
         li {
             margin-top: 20px;
             text-align: center;
+            
 
             @include tabletL {
                 display: inline-block;
-                margin-left: 1rem;
+                margin-left: 1%;
+               
             }
             
+        }
+
+        li:first-child {
+            margin-left: 0;
         }
         
         a {
@@ -608,11 +614,12 @@ main {
                 h2 {
                     padding-top: 2rem;
                     text-align: center;
-                    font-size: 2.5rem;
+                    font-size: 2.2rem;
                     font-weight: bold;
     
                     @include tabletL {
                         max-width: 500px;
+                        text-align: left;
                     
                     
                     }
@@ -639,19 +646,33 @@ main {
         @include tabletL {
             .flex:nth-child(odd) {
             
-                p, h2 {
+                p {
                     padding-left: 10%;
                     padding-right: 4rem;
                     margin-left: auto;
+                }
+
+                h2 {
+                  
+                   margin-left: auto;
+                   justify-content: left; 
+                   padding-left: 10%;
                 }
             }
             
             .flex:nth-child(even) {
                 
-                p, h2 {
+                p {
                     padding-right: 10%;
                 padding-left: 4rem;
                 color: #f4f4f4;
+                }
+
+                h2 {
+                    margin-right: auto;
+                    justify-content: right;
+                    padding-left: 4rem;
+                    color: #f4f4f4;
                 }
 
                 .text {
@@ -693,9 +714,12 @@ main {
 
     
     p {
-        line-height: 1.7rem;
+        
         color: $offblack;
+        
         @include paragraphPadding;
+        padding-top: 0;
+        
     }
 
     h3 {
@@ -845,7 +869,7 @@ main {
         margin: auto;
         font-size: 1.6rem;
         letter-spacing: .1rem;
-        
+        background: $hotblue;
         text-decoration: none;
         width: 12rem;
         height: 39px;
@@ -853,17 +877,19 @@ main {
         border-radius: 20px;
         font-weight: bold;
         transition: all 200ms ease-in-out;
-        box-shadow: 0 0 40px 40px $newyellow inset, 0 0 0 0 $newyellow;
+        
         margin-bottom: 1rem;
-        color: #000;
+        color: #f2f2f2;
         align-self: flex-end;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
         
         
 
     }
 
     a:hover {
-        box-shadow: 0 0 10px 0 $newyellow inset, 0 0 10px 4px $newyellow;
+        box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.3);
+        transform: translate(0px, -10px);
     }
     
     .imgc {
@@ -1017,13 +1043,13 @@ main {
     }
 
     #button {
-        background: $newyellow;
+        background: $hotblue;
         border: none;
         border-radius: 20px;
         font-weight: bold;
         letter-spacing: .1rem;
         
-        color: #000;
+        color: #f2f2f2;
         margin-bottom: 0;
         font-size: 1.6rem;
         cursor: pointer;
@@ -1082,6 +1108,8 @@ footer {
             padding-bottom: 2rem;
             padding-top: 2rem;
             text-align: center;
+            font-size: .8rem;
+            color: #969699;
         }
 }
 
