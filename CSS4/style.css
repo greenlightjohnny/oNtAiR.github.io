@@ -275,7 +275,8 @@ main nav .menuIcon.open .bottomBar {
 }
 
 .showMenu {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   visibility: visible;
   opacity: 1;
   max-height: 1000px;
@@ -384,7 +385,7 @@ main nav .menuIcon.open .bottomBar {
 }
 
 .about .centert .flex .pic img {
-  max-width: 101%;
+  max-width: 100%;
   max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;

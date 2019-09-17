@@ -35,9 +35,9 @@ const mainMav = document.querySelector('nav');
 
 function menuToggle() {
     menuList.classList.toggle('showMenu');
-    menu.classList.toggle('menuMove');
+    
     mainMav.classList.toggle('backgroundOpacity');
-
+    
     menu.classList.toggle('open');
     
 
