@@ -80,7 +80,7 @@ html {
 
 body {
   height: 100%;
- 
+
   font-family: "Montserrat";
 }
 
@@ -154,6 +154,7 @@ header {
 }
 
 main {
+  background: #fdfdfd;
   nav {
     display: flex;
     flex: 1 1 0px;
@@ -337,184 +338,98 @@ main {
 
 /********** Articles *********/
 
-.articles {
-  background-image: linear-gradient(#242424, #0c0c0c);
-  padding-bottom: 3rem;
-  display: none;
-}
-#tt {
-  @include sectionHeading;
-}
-////////// ABOUT ///////////////////////////////////////////
-
 .about {
-  .centert {
-    .flex {
-      @include tabletL {
-        display: flex;
-        flex-wrap: wrap;
-        
+    background: #FDFDFD;
+background: -webkit-linear-gradient(top, #FDFDFD, #F2F2F2);
+background: -moz-linear-gradient(top, #FDFDFD, #F2F2F2);
+background: linear-gradient(to bottom, #FDFDFD, #F2F2F2);
+padding-bottom: 4rem;
+}
+.centert {
+  max-width: 1180px;
 
-        div {
-          flex: 1 1 0;
-        }
-      }
-
-      .text {
-          
-        p {
-          padding: 1rem;
-          padding-top: 1.5rem;
-          font-family: "Montserrat";
-
-          font-size: 1.2rem;
-          line-height: 1.7rem;
-          @include tabletL {
-            max-width: 500px;
-          }
-        }
-        h2 {
-          padding-top: 2rem;
-          text-align: center;
-          font-size: 2.2rem;
-          font-weight: bold;
-
-          @include tabletL {
-            max-width: 500px;
-            text-align: left;
-          }
-        }
-      }
-
-      .pic {
-        display: flex;
-        max-height: 50vh;
-        flex: 1;
-
-        img {
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: cover;
-          display: flex;
-          flex: 1;
-          
-          
-        }
-      }
-    }
-
-    @include tabletL {
-      .flex:nth-child(odd) {
-        p {
-          padding-left: 10%;
-          padding-right: 4rem;
-          margin-left: auto;
-        }
-
-        h2 {
-          margin-left: auto;
-          justify-content: left;
-          padding-left: 10%;
-        }
-      }
-
-      .flex:nth-child(even) {
-        p {
-          padding-right: 10%;
-          padding-left: 4rem;
-          color: #f4f4f4;
-        }
-
-        h2 {
-          margin-right: auto;
-          justify-content: right;
-          padding-left: 4rem;
-          color: #f4f4f4;
-        }
-
-        .text {
-          background: $offblack;
-        }
-      }
-    }
-
-    .middleFlex {
-      display: flex;
-      flex: 1;
-      flex-direction: column-reverse;
-
-      @include tabletL {
-        flex-direction: row;
-        background: $offblack;
-      }
-    }
-  }
-
-  background-image: linear-gradient(to bottom, #fdfdfd, #fbfbfb, #f9f9f9, #f7f7f7, #f5f5f5);
   
 
-  @include tabletP {
-  }
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 0 auto;
+  margin-top: 6rem;
+  
 
-  .sTitle {
-    text-align: center;
-  }
-
-  h2 {
-    @include sectionHeading;
-    padding-bottom: 0;
-    color: $offblack;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  p {
-    color: $offblack;
-
-    @include paragraphPadding;
-    padding-top: 0;
-  }
-
-  h3 {
-    padding-top: 1rem;
-    @include subHeading;
-    color: $offblack;
-    padding-bottom: 1rem;
-  }
-
-  article {
-    div {
-      @include tabletP {
-        min-width: 300px;
-        max-width: 500px;
-        background: #fff;
-        margin: auto;
-        margin-bottom: 1.6rem;
-        border-radius: 19px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-      }
-
-      @include tabletL {
-        margin: 2rem;
-      }
-    }
-
-    @include tabletP {
-      width: 100%;
-      margin: 0 auto;
-    }
+  .flexNew {
 
     @include tabletL {
-      color: $offwhite;
+        display: flex;
+        flex: 0 1 1;
 
-      display: flex;
-      flex: 1;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+    }
+    .intro {
+      padding: 0.7rem;
+      padding-bottom: 1.4rem;
+      
+      p {
+          padding-top: 1rem;
+          
+          @include tabletP {
+            padding-left: 4rem;
+            padding-right: 4rem;
+            font-size: 1.3rem;
+          }
+          @include tabletL {
+              padding-left: 0;
+              padding-right: 0;
+
+              
+          }
+      }
+      h2 {
+        text-align: center;
+        padding-bottom: 1rem;
+        @include tabletL {
+            text-align: left;
+        }
+      }
+
+      
+    }
+    
+
+    .info, .intro {
+        @include tabletL {
+            flex: 0 0 auto;
+            flex-basis: 33.33333%;
+            max-width: 33.33333%;
+        }
+    }
+
+
+    .info {
+
+        .card {
+            background-image: url('/IMG4/placeholder2.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 293px;
+        @include tabletL {
+            margin: 1rem;
+        }
+
+          h4 {
+              color: #f2f2f2;
+              font-size: 2rem;
+              font-weight: bold;
+              padding-top: 1rem;
+              padding-left: 3rem;
+          }
+
+          p {
+              color: #f2f2f2;
+              padding-left: 3rem;
+              padding-top: 1rem;
+          }
+        }
+        
     }
   }
 }
@@ -576,10 +491,6 @@ main {
     line-height: 1.7rem;
     @include paragraphPadding;
   }
-}
-
-main {
-  background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
 }
 
 .items {
@@ -682,6 +593,7 @@ main {
 
 .contact {
   color: $offwhite;
+  background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
   .padding {
     padding: 0 15px 0 15px;
   }

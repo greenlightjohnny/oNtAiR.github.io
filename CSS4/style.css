@@ -95,6 +95,10 @@ header h1 {
   background: rgba(253, 253, 253, 0.9);
 }
 
+main {
+  background: #fdfdfd;
+}
+
 main nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,233 +314,107 @@ main nav .menuIcon.open .bottomBar {
 }
 
 /********** Articles *********/
-.articles {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#0c0c0c));
-  background-image: linear-gradient(#242424, #0c0c0c);
-  padding-bottom: 3rem;
-  display: none;
-}
-
-#tt {
-  text-align: center;
-  font-size: 3rem;
-  letter-spacing: 0.2rem;
-  padding: 2rem 0 2rem 0;
-  color: #f2f2f2;
-  font-family: "montserrat";
-}
-
 .about {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), color-stop(#fbfbfb), color-stop(#f9f9f9), color-stop(#f7f7f7), to(#f5f5f5));
-  background-image: linear-gradient(to bottom, #fdfdfd, #fbfbfb, #f9f9f9, #f7f7f7, #f5f5f5);
+  background: #FDFDFD;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FDFDFD), to(#F2F2F2));
+  background: linear-gradient(to bottom, #FDFDFD, #F2F2F2);
+  padding-bottom: 4rem;
+}
+
+.centert {
+  max-width: 1180px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 auto;
+  margin-top: 6rem;
 }
 
 @media (min-width: 900px) {
-  .about .centert .flex {
+  .centert .flexNew {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .about .centert .flex div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 1;
+            flex: 0 1 1;
   }
 }
 
-.about .centert .flex .text p {
-  padding: 1rem;
-  padding-top: 1.5rem;
-  font-family: "Montserrat";
-  font-size: 1.2rem;
-  line-height: 1.7rem;
+.centert .flexNew .intro {
+  padding: 0.7rem;
+  padding-bottom: 1.4rem;
+}
+
+.centert .flexNew .intro p {
+  padding-top: 1rem;
+}
+
+@media (min-width: 600px) {
+  .centert .flexNew .intro p {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width: 900px) {
-  .about .centert .flex .text p {
-    max-width: 500px;
+  .centert .flexNew .intro p {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-.about .centert .flex .text h2 {
-  padding-top: 2rem;
+.centert .flexNew .intro h2 {
   text-align: center;
-  font-size: 2.2rem;
-  font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 900px) {
-  .about .centert .flex .text h2 {
-    max-width: 500px;
+  .centert .flexNew .intro h2 {
     text-align: left;
   }
 }
 
-.about .centert .flex .pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-height: 50vh;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+@media (min-width: 900px) {
+  .centert .flexNew .info, .centert .flexNew .intro {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    -ms-flex-preferred-size: 33.33333%;
+        flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
 }
 
-.about .centert .flex .pic img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.centert .flexNew .info .card {
+  background-image: url("/IMG4/placeholder2.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 293px;
 }
 
 @media (min-width: 900px) {
-  .about .centert .flex:nth-child(odd) p {
-    padding-left: 10%;
-    padding-right: 4rem;
-    margin-left: auto;
-  }
-  .about .centert .flex:nth-child(odd) h2 {
-    margin-left: auto;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    padding-left: 10%;
-  }
-  .about .centert .flex:nth-child(even) p {
-    padding-right: 10%;
-    padding-left: 4rem;
-    color: #f4f4f4;
-  }
-  .about .centert .flex:nth-child(even) h2 {
-    margin-right: auto;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
-    padding-left: 4rem;
-    color: #f4f4f4;
-  }
-  .about .centert .flex:nth-child(even) .text {
-    background: #242424;
+  .centert .flexNew .info .card {
+    margin: 1rem;
   }
 }
 
-.about .centert .middleFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-@media (min-width: 900px) {
-  .about .centert .middleFlex {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    background: #242424;
-  }
-}
-
-.about .sTitle {
-  text-align: center;
-}
-
-.about h2 {
-  text-align: center;
-  font-size: 3rem;
-  letter-spacing: 0.2rem;
-  padding: 2rem 0 2rem 0;
+.centert .flexNew .info .card h4 {
   color: #f2f2f2;
-  font-family: "montserrat";
-  padding-bottom: 0;
-  color: #242424;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
-.about p {
-  color: #242424;
-  padding: 5px 15px 30px 15px;
-  padding-top: 0;
-}
-
-.about h3 {
-  padding-top: 1rem;
-  text-align: center;
   font-size: 2rem;
-  font-family: "Montserrat";
-  color: #242424;
-  padding-bottom: 1rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-left: 3rem;
 }
 
-@media (min-width: 600px) {
-  .about article div {
-    min-width: 300px;
-    max-width: 500px;
-    background: #fff;
-    margin: auto;
-    margin-bottom: 1.6rem;
-    border-radius: 19px;
-    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  }
-}
-
-@media (min-width: 900px) {
-  .about article div {
-    margin: 2rem;
-  }
-}
-
-@media (min-width: 600px) {
-  .about article {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 900px) {
-  .about article {
-    color: #f4f4f4;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+.centert .flexNew .info .card p {
+  color: #f2f2f2;
+  padding-left: 3rem;
+  padding-top: 1rem;
 }
 
 /**************************************************************************
@@ -611,10 +489,6 @@ main nav .menuIcon.open .bottomBar {
   color: #242424;
   line-height: 1.7rem;
   padding: 5px 15px 30px 15px;
-}
-
-main {
-  background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
 }
 
 .items {
@@ -750,6 +624,7 @@ main {
 *********************** Contact *****************************************/
 .contact {
   color: #f4f4f4;
+  background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
 }
 
 .contact .padding {
