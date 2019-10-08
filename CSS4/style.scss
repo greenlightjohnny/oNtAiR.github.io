@@ -346,7 +346,7 @@ background: linear-gradient(to bottom, #FDFDFD, #F2F2F2);
 padding-bottom: 4rem;
 }
 .centert {
-  max-width: 1180px;
+  max-width: 1400px;
 
   
 
@@ -417,10 +417,12 @@ padding-bottom: 4rem;
 
           h4 {
               color: #f2f2f2;
-              font-size: 2rem;
+              font-size: 4rem;
+              letter-spacing: .3rem;
               font-weight: bold;
               padding-top: 1rem;
               padding-left: 3rem;
+              font-family: 'tangerine';
           }
 
           p {
@@ -592,130 +594,130 @@ padding-bottom: 4rem;
 *********************** Contact *****************************************/
 
 .contact {
-  color: $offwhite;
-  background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
-  .padding {
-    padding: 0 15px 0 15px;
-  }
-
-  .contactFlex {
-    @include tabletL {
-      width: 90%;
-      margin: 0 auto;
-      display: flex;
-      flex: 1;
-    }
-
-    @include desktop {
-      width: 80%;
-    }
-  }
-
-  .contactTop {
-    .phone {
-      color: $newyellow;
-      font-size: 2rem;
-    }
-
-    a:hover {
-      transform: scale(1.1);
-    }
-
-    @include tabletP {
-      width: 90%;
-
-      margin: 0 auto;
-    }
-    @include tabletL {
-      margin: 0 2rem 0 2rem;
-    }
-
-    @include desktop {
-      margin: 0 5%;
-    }
-  }
-  .form {
-    width: 90%;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    @include tabletL {
-      margin: 0 2rem 0 2rem;
-    }
-
-    @include desktop {
-      margin: 0 5%;
-    }
-  }
-
-  a {
-    text-decoration: none;
-    font-size: 1.3rem;
     color: $offwhite;
-  }
-  #contactform {
-    padding-bottom: 3rem;
-  }
-
-  input {
-    display: block;
-    width: 100%;
-    margin-bottom: 5%;
-    border-radius: 7px;
-    font-size: 1.2rem;
-    padding: 4px;
-    border-style: outset;
-    font-family: "montserrat";
-    margin-top: 2%;
-  }
-
-  #button {
-    background: $hotblue;
-    border: none;
-    border-radius: 20px;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-
-    color: #f2f2f2;
-    margin-bottom: 0;
-    font-size: 1.6rem;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-
-    @include tabletP {
-      width: 12rem;
+    background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
+    .padding {
+      padding: 0 15px 0 15px;
     }
-
-    #button:hover {
+  
+    .contactFlex {
+      @include tabletL {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex: 1;
+      }
+  
+      @include desktop {
+        width: 80%;
+      }
+    }
+  
+    .contactTop {
+      .phone {
+        color: $newyellow;
+        font-size: 2rem;
+      }
+  
+      a:hover {
+        transform: scale(1.1);
+      }
+  
+      @include tabletP {
+        width: 90%;
+  
+        margin: 0 auto;
+      }
+      @include tabletL {
+        margin: 0 2rem 0 2rem;
+      }
+  
+      @include desktop {
+        margin: 0 5%;
+      }
+    }
+    .form {
+      width: 90%;
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+  
+      @include tabletL {
+        margin: 0 2rem 0 2rem;
+      }
+  
+      @include desktop {
+        margin: 0 5%;
+      }
+    }
+  
+    a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: $offwhite;
+    }
+    #contactform {
+      padding-bottom: 3rem;
+    }
+  
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 5%;
+      border-radius: 7px;
+      font-size: 1.2rem;
+      padding: 4px;
+      border-style: outset;
+      font-family: "montserrat";
+      margin-top: 2%;
+    }
+  
+    #button {
+      background: $hotblue;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+  
+      color: #f2f2f2;
+      margin-bottom: 0;
+      font-size: 1.6rem;
       cursor: pointer;
+      transition: all 200ms ease-in-out;
+  
+      @include tabletP {
+        width: 12rem;
+      }
+  
+      #button:hover {
+        cursor: pointer;
+      }
+    }
+  
+    #button:hover {
+      box-shadow: 0 0 10px 0 $newyellow inset, 0 0 10px 4px $newyellow;
+    }
+    textarea {
+      width: 100%;
+      margin-bottom: 5%;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      min-height: 5rem;
+      padding: 5px;
+      font-family: "montserrat";
+      margin-top: 2%;
+    }
+  
+    h2 {
+      @include sectionHeading;
+      padding-top: 4rem;
+    }
+  
+    p {
+      line-height: 1.7rem;
+      @include paragraphPadding();
     }
   }
-
-  #button:hover {
-    box-shadow: 0 0 10px 0 $newyellow inset, 0 0 10px 4px $newyellow;
-  }
-  textarea {
-    width: 100%;
-    margin-bottom: 5%;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    min-height: 5rem;
-    padding: 5px;
-    font-family: "montserrat";
-    margin-top: 2%;
-  }
-
-  h2 {
-    @include sectionHeading;
-    padding-top: 4rem;
-  }
-
-  p {
-    line-height: 1.7rem;
-    @include paragraphPadding();
-  }
-}
 
 /**************************************************************************
 *********************** Footer *****************************************/
@@ -733,4 +735,27 @@ footer {
     font-size: 0.8rem;
     color: #969699;
   }
+}
+
+
+
+/***********************************SNIPCART BUTTONS****************/
+
+.snipcart-add-item {
+  
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  height: 2rem;
+  border-radius: 20px;
+  color: white;
+  background-color: #3c56ee;
+  border-color: transparent;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+}
+
+.snipcart-add-item:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 #4886d9 inset, 0 0 10px 4px #4886d9;
 }

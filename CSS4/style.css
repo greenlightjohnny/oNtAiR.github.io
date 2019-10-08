@@ -322,7 +322,7 @@ main nav .menuIcon.open .bottomBar {
 }
 
 .centert {
-  max-width: 1180px;
+  max-width: 1400px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-flex: 1;
@@ -405,10 +405,12 @@ main nav .menuIcon.open .bottomBar {
 
 .centert .flexNew .info .card h4 {
   color: #f2f2f2;
-  font-size: 2rem;
+  font-size: 4rem;
+  letter-spacing: .3rem;
   font-weight: bold;
   padding-top: 1rem;
   padding-left: 3rem;
+  font-family: 'tangerine';
 }
 
 .centert .flexNew .info .card p {
@@ -790,5 +792,26 @@ footer div {
   text-align: center;
   font-size: 0.8rem;
   color: #969699;
+}
+
+/***********************************SNIPCART BUTTONS****************/
+.snipcart-add-item {
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  height: 2rem;
+  border-radius: 20px;
+  color: white;
+  background-color: #3c56ee;
+  border-color: transparent;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+}
+
+.snipcart-add-item:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px 0 #4886d9 inset, 0 0 10px 4px #4886d9;
+          box-shadow: 0 0 10px 0 #4886d9 inset, 0 0 10px 4px #4886d9;
 }
 /*# sourceMappingURL=style.css.map */
