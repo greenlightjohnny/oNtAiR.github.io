@@ -1,0 +1,997 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oswald|Rubik&display=swap');
+
+
+
+
+
+*, html {
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: inherit,
+}
+
+html, body, * {
+    padding: 0;
+    margin: 0;
+    font-family: 'rubik';
+    scroll-behavior: smooth;
+}
+
+
+///////////// MIXINS //////////////
+@mixin phone {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+  
+  @mixin tabletP {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @mixin tabletM {
+      @media (min-width: 650px) {
+          @content;
+      }
+  }
+  
+  @mixin tabletL {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  
+  @mixin desktopL {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+
+  $pinkish: #ef2e5d;
+  $bluish: #66b0ff;
+  $white: white;
+  $black: black;
+
+
+
+  .highlightOne {
+      background: $pinkish;
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+
+  .highlightTwo {
+      background: $bluish;
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  .highlightOne1 {
+    background: $pinkish;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7, .7)}
+    to {opacity: 1;}
+}
+
+.fade-in-element{
+    animation: fade-in 1.4s;
+}
+
+.hidden {
+    opacity: 0;
+    
+} 
+
+.slow {
+    transition: all ease-in-out 200ms;
+}
+
+.navShow {
+    
+    
+    pointer-events: all;
+    font-size: 1rem;
+    transition: height .4s linear;
+    pointer-events: all;
+    opacity: 1;
+    transition: all ease-in-out 1s;
+    transition: height 700ms linear;
+    height: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    
+}
+
+.navHeight {
+    height: 100vh;
+}
+.ulShow {
+    height: auto;
+    opacity: 1;
+    transition: all ease-in-out 400ms;
+    padding-top: 8rem;
+}
+
+
+nav {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    background: rgba(255, 255, 255, .9);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all ease-in-out 1s;
+    transition: height .4s linear;
+
+
+    @include tabletL {
+        
+    }
+
+    
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        
+        margin-left: 5%;
+        color: black;
+        font-weight: bold;
+        
+        font-size: 2rem;
+        vertical-align: center;
+    }
+
+
+    .ham {
+        display: inline-block;
+        margin-right: 5%;
+        
+        width: 50px;
+        height: 50px;
+
+        @include tabletL {
+            display: none;
+        }
+        
+    }
+
+    .mIcon,
+    .mIcon:after,
+    .mIcon:before {
+        height: 7px;
+        width: 100%;
+        border-radius: 3px;
+
+    }
+
+    .mIcon {
+        position: relative;
+        transform: translateY(20px);
+        background: $bluish;
+        transition: all 0ms 300ms;
+
+        &.animate {
+            background: rgba(255, 255, 255, 0);
+        }
+    }
+
+    .mIcon:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        background: $bluish;
+        transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+
+    }
+
+    .mIcon:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 15px;
+        background: $bluish;
+        transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+
+    }
+
+    .mIcon.animate:after {
+        top: 0;
+        transform: rotate(45deg);
+        background: $pinkish;
+        transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+    }
+
+    .mIcon.animate:before {
+        bottom: 0;
+        transform: rotate(-45deg);
+        background: $pinkish;
+        transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+    }
+    ul {
+        list-style-type: none;
+        color: white;
+        display: inline-block;
+        
+        
+        height: 0;
+        opacity: 0;
+        transition: all ease-in-out 400ms;
+
+
+        @include tabletL {
+            display: inline-block;
+            margin-left: 40%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            height: auto;
+            opacity: 1;
+            margin-right: 5%;
+        }
+       
+        
+    }
+
+   
+
+    li {
+        display: block;
+       
+        
+        padding-bottom: 2rem;
+        font-size: 2rem;
+        :nth-child(odd) {
+            transform: translateX(-200px);
+        }
+        
+
+        @include tabletL {
+            display: inline-block;
+            padding-bottom: 0;
+            padding-right: 1rem;
+            font-size: 1.3rem;
+        }
+
+
+
+        a {
+            text-decoration: none;
+            color: $black;
+            transition: color ease-in-out 400ms;
+
+        }
+
+        a:hover {
+            color: $bluish;
+            transition: color 400ms ease-in-out;
+        }
+    }
+}
+
+nav.expand {
+    height: 100vh;
+    transition: height 400ms linear;
+}
+
+//////////////// LANDING PAGE ////////////////////
+
+html, body {
+    background: black;
+    
+}
+
+
+
+.backgroundImage {
+    background-image: url('/portfolio/Images/Robert\ 0368.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    
+}
+header {
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+   
+    
+    h1 {
+        font-size: 3.5rem;
+
+        @include tabletM {
+            font-size: 5rem;
+        }
+        
+    }
+    p {
+        line-height: 1.7rem;
+       
+        @include tabletM {
+            font-size: 1.4rem;
+        }
+    }
+
+    .mainIntro {
+        
+        
+            position: absolute;
+            top: 7%;
+            pointer-events: none;
+            min-width: 100%;
+            left: 50%;
+            margin: 0 auto;
+            color: white;
+            
+            padding-bottom: 3rem;
+            padding-top: 3rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            transform: translateX(-50%);
+    }
+
+    .more {
+        opacity: .4;
+        color: white;
+        position: absolute;
+        pointer-events: none;
+        bottom: 6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1rem 2rem 1rem 2rem;
+        font-size: 2rem;
+        border: 1px solid #cdd4de;
+        border-radius: 5px;
+        width: 16rem;
+
+        .downArrow {
+            border: solid white;
+            border-width: 0px 0px 4px 4px;
+            width: 40px;
+            margin: 0 auto;
+            height: 40px;
+           
+            animation: bounce 2s infinite;
+            
+            transform: rotate(-45deg);
+
+        }
+    }
+}
+
+/////////////// PROJECTS ////////////////
+
+.projects {
+    background: white;
+    //background: #fdfdfd;
+    //background: #f0f0f0;
+    //background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
+
+    
+    
+
+  
+   
+       
+        
+        
+            h2 {
+                
+                padding-top: 6rem;
+                padding-bottom: 1rem;
+               
+                text-align: center;
+                color: $pinkish;
+                font-size: 3rem;
+                
+               
+            }
+        
+            .topP {
+                padding-bottom: 1rem;
+                transform: translateY(1.6rem * 2);
+                transition: transform 300ms, opacity 300ms;
+                opacity: 0;
+            }
+        
+      
+    
+
+    p {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: $black;
+        line-height: 1.6rem;
+
+        @include tabletM {
+            text-align: center;
+        }
+       
+    }
+
+    .flexitems {
+       padding-bottom: 6rem;
+       display: flex;
+       flex: 1;
+       flex-wrap: wrap;
+       justify-content: center;
+       
+
+        @include tabletM {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+        }
+
+
+        
+    }
+
+    .inView {
+        transform: translateY(0);
+        opacity: 1;
+        color: $black;
+    }
+
+    article {
+        width: 100%;
+        height: 300px;
+        max-width: 450px;
+        min-width: 300px;
+        overflow: hidden;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all ease-in-out 300ms;
+        border-radius: 10px;
+        transform: translateY(1.6rem * 2);
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    
+    
+
+        
+
+        @include tabletL {
+            max-width: 450px;
+            min-width: 300px;
+            margin: 2rem;
+            border-radius: 10px;
+            
+           
+        }
+
+        .slideIn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-450px);
+            transition: all ease-in-out 300ms;
+            h4 {
+                color: $pinkish;
+                padding-top: 3rem;
+                padding-left: 2rem;
+                font-size: 2rem;
+             } 
+
+             p {
+                color: $white;
+                padding-left: 2rem;
+                text-align: left;
+               
+            }
+
+        }
+
+        
+       
+    }
+
+    article:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-450px);
+        width: 100%;
+        height: 100%;
+        background: $black;
+        opacity: .7;
+        z-index: 2;
+        transition: all ease-in-out 300ms;
+
+        
+    }
+
+    article:hover {
+        transform: scale(1.1);
+        .slideIn {
+            transform: translateX(0px);
+            z-index: 3;
+        }
+        
+    }
+
+    article:hover:after {
+        
+            transform: translateX(0px);
+        z-index: 2;
+        
+        
+    }
+
+    .bluebee {
+        background-image: url('/portfolio/Images/bee.png');
+    }
+
+    .bluebee1 {
+        background-image: url('/portfolio/Images/sunsetscreenshot.png');
+    }
+
+    .bluebee2 {
+        background-image: url('/portfolio/Images/disaster.png');
+    }
+
+
+    .bluebee3 {
+        background-image: url('/portfolio/Images/port.png');
+    }
+
+    .bluebee {
+        margin-top: 2rem;
+        
+    }
+    
+}
+
+// .projects::before {
+//     position: absolute;
+//     content: "";
+//     width: 100%;
+//     height: 10%;   
+//     display: block;
+//     top: 0;
+//     left: 0;
+//     background: white;
+//     transform-origin: top center;
+//     transform: skewY(-20deg);
+    
+// }
+
+
+
+////////////// About /////////////////////////////////////////////
+
+.about {
+    background: #f6f6f6;
+    color: #333;
+    padding-bottom: 5rem;
+    h2 {
+        color: $black;
+        text-align: center;
+        
+        font-size: 3rem;
+        padding-top: 6rem;
+        padding-bottom: 2.6rem;
+    }
+
+    .newFlex {
+        @include tabletM {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            
+            justify-content: center;
+    }
+
+    article {
+        
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background: white;
+        padding-bottom: 1rem;
+        box-shadow: 0 0 10px;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+        @include tabletM {
+            flex: 1;
+            min-width: 300px;
+            max-width: 450px;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: 5px;
+            margin-bottom: -14rem;
+            box-shadow: 0 0 10px;
+            
+           
+        }
+
+        .sideways {
+            position: absolute;
+            top: 25px;
+            text-align: center;
+            right: -40px;
+            border: 1px solid #e1e3e4;
+            font-size: .8rem;
+            padding-bottom: .5rem;
+            padding-top: .5rem;
+            transform: rotate(45deg);
+            width: 160px;
+            background: $bluish;
+            
+        }
+        }
+
+        .slideRight {
+            transform: translateX(-10rem);
+            transition: transform 300ms, opacity 300ms;
+            opacity: 0; 
+            overflow-x: hidden;
+        }
+
+        .slideLeft {
+            transform: translateX(10rem);
+            transition: transform 300ms, opacity 300ms;
+            opacity: 0; 
+            overflow-x: hidden;
+        }
+
+        .fromRight {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .fromLeft {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        
+
+        h3 {
+            
+            text-align: center;
+            font-size: 2.3rem;
+            
+            color: black;
+            width: 160px;
+            
+            
+            
+            background: linear-gradient(to top, $pinkish 40%, transparent 20%);
+            
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1rem;
+            
+
+            @include tabletM {
+               
+                margin-top: 1rem;
+            }
+        }
+
+        h3:after {
+            content: '';
+        }
+
+       
+
+        
+
+        .slideUp {
+            transform: translateY(1.6rem * 2);
+            opacity: 0;
+            transition: opacity 300ms, transform 300ms;
+        }
+
+        .inView {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        ul {
+            text-align: left;
+           list-style-type: none;
+           padding-left: 1rem;
+           padding-right: 1rem;
+           li {
+               font-size: 1.3rem;
+               font-weight: bold;
+               color: $black;
+               
+               
+               
+
+               .high2, .high3 {
+                   
+                   padding: 0 9px 0 9px;
+                   color: black;
+                   position: relative;
+                   //background: linear-gradient(to top, $bluish 30%, transparent 40%)
+               }
+           }
+
+           
+        }
+
+        p {
+           padding-left: 1rem;
+           padding-right: 1rem;
+           padding-bottom: 1rem;
+           line-height: 1.5rem;
+           color: $black;
+        }
+    }
+}
+
+
+.arrowBounce {
+    animation: bounce 2s infinite;
+    color: #5778F3;
+    font-size: 22px;
+    position: relative;
+}
+
+.arrowBounce::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../assets/images/scroll-arrow.svg") no-repeat;
+    height: 26px;
+    width: 18px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        transform: rotate(-45deg)
+    }
+    40% {
+        transform: translateY(-30px);
+        transform: rotate(-45deg)
+    }
+    60% {
+        transform: translateY(-15px);
+        transform: rotate(-45deg)
+    }
+}
+
+
+////////// Contact /////////
+
+/*********** CONTACT **********************************/
+
+
+.slideUp {
+    transform: translateY(1.6rem * 2);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+.inView {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+  
+.contact {
+    background: #1f1f1f;
+    
+
+
+    .flexC {
+        padding-bottom: 3rem;
+        @include tabletL {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+       
+        justify-content: center;
+        flex: 1;
+        }
+    }
+
+    .callMe {
+        width: 90%;
+        min-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+
+        h3 {
+            font-size: 2rem;
+           position: relative;
+           text-align: center;
+
+           @include tabletM {
+            text-align: left;
+           }
+           
+        }
+
+        h3:after {
+            content: "";
+            width: 100%;
+            
+            position: absolute;
+            height: 2px;
+            left: 10%;
+            bottom: -10px;
+            background: linear-gradient(to right, $pinkish 20%, transparent 80%);
+
+            @include tabletM {
+                left: 0px;
+            }
+        }
+
+        p {
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+            padding-right: 2.5rem;
+            line-height: 1.5rem;
+            
+        }
+        @include tabletM {
+            
+            max-width: 450px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        @include tabletL {
+            margin: 0;
+        }
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+        color: $bluish;
+
+        @include tabletM {
+            padding-top: 16rem;
+        }
+        
+    }
+    
+    
+    color: white;
+
+
+    .form {
+        margin: 0 auto;
+        width: 90%;
+        min-width: 300px;
+    
+        margin-bottom: 3rem;
+
+        @include tabletM {
+            
+            max-width: 450px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        @include tabletL {
+            margin: 0;
+        }
+    }
+
+    form div + div {
+        margin-top: 1rem;
+    }
+
+    
+
+    label {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        font-size: 1.1rem;
+        margin-bottom: .3rem;
+    }
+
+    textarea {
+        vertical-align: top;
+    }
+
+    input, textarea {
+       
+        font-family: 'rubik';
+        width: 100%;
+        background: transparent;
+        
+        border: 1px solid #fdfdfd;
+        border-radius: 2px;
+        font-size: 1.1rem;
+        color: #fff;
+        
+        line-height: 2rem;
+        border: 1px solid $bluish;
+    }
+
+    input {
+        border: 1px solid $bluish;
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        border: 1px solid $pinkish;
+    }
+
+   
+    button {
+        
+        width: 10rem;
+        color: white;
+        font-weight: bold;
+        font-size: 1.4rem;
+        background-color: transparent;
+        border: 3px solid $pinkish;
+        border-radius: 15px;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        transition: all ease-in-out .4s;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #ef2e5d;
+    }
+  
+    
+  }
+///////// footer //////////
+
+
+footer {
+    background-color: #0c0c0c;
+    color: #e4dada;
+    text-align: center;
+
+    height: 7rem;
+
+    p {
+        padding-top: 3rem;
+    }
+}
