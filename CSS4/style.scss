@@ -69,6 +69,8 @@ $compgreen: #7bbf2e;
 
 $compblue: #23a1a6;
 
+$hmmy: #faed26;
+
 * {
   margin: 0;
   padding: 0;
@@ -117,7 +119,7 @@ header {
   h1 {
     text-align: center;
     position: relative;
-    color: #f2f2f2;
+    color: #fff;
     top: 30%;
     font-family: "tangerine";
     letter-spacing: 0.2rem;
@@ -339,9 +341,10 @@ main {
 /********** Articles *********/
 
 .about {
-    background: #FDFDFD;
-background: -webkit-linear-gradient(top, #FDFDFD, #F2F2F2);
-background: -moz-linear-gradient(top, #FDFDFD, #F2F2F2);
+  //background: #272727;
+//background: #FDFDFD;
+//background: -webkit-linear-gradient(top, #FDFDFD, #F2F2F2);
+//background: -moz-linear-gradient(top, #FDFDFD, #F2F2F2);
 background: linear-gradient(to bottom, #FDFDFD, #F2F2F2);
 padding-bottom: 4rem;
 }
@@ -366,9 +369,13 @@ padding-bottom: 4rem;
     .intro {
       padding: 0.7rem;
       padding-bottom: 1.4rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
       
       p {
           padding-top: 1rem;
+          color: #000;
+          line-height: 1.5rem;
           
           @include tabletP {
             padding-left: 4rem;
@@ -385,6 +392,10 @@ padding-bottom: 4rem;
       h2 {
         text-align: center;
         padding-bottom: 1rem;
+        color: #000;
+        font-family: 'tangerine';
+        font-weight: bold;
+        font-size: 2rem;
         @include tabletL {
             text-align: left;
         }
@@ -412,7 +423,8 @@ padding-bottom: 4rem;
         background-repeat: no-repeat;
         height: 293px;
         @include tabletL {
-            margin: 1rem;
+            margin-top: 2rem;
+            margin-right: 2rem;
         }
 
           h4 {
@@ -441,7 +453,7 @@ padding-bottom: 4rem;
 
 .store {
   padding-bottom: 4rem;
-  background: #fff;
+  background: linear-gradient(#fff);
 
   @include tabletL {
     padding-top: 3rem;
@@ -465,7 +477,7 @@ padding-bottom: 4rem;
 
   h2 {
     @include sectionHeading;
-    color: $offblack;
+    color: #000;
     padding-bottom: 0.5rem;
     padding-top: 1rem;
     display: flex;
@@ -489,7 +501,7 @@ padding-bottom: 4rem;
   }
 
   p {
-    color: $offblack;
+    color: #000;
     line-height: 1.7rem;
     @include paragraphPadding;
   }
@@ -510,29 +522,18 @@ padding-bottom: 4rem;
     padding-bottom: 0;
   }
   a {
-    text-align: center;
-    margin: auto;
-    font-size: 1.6rem;
-    letter-spacing: 0.1rem;
-    background: $hotblue;
     text-decoration: none;
-    width: 12rem;
-    height: 39px;
-    line-height: 39px;
+    
     border-radius: 20px;
-    font-weight: bold;
+    
     transition: all 200ms ease-in-out;
-
-    margin-bottom: 1rem;
-    color: #f2f2f2;
-    align-self: flex-end;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    
+   
+    
   }
 
-  a:hover {
-    box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.3);
-    transform: translate(0px, -10px);
-  }
+
 
   .imgc {
     max-width: 500px;
@@ -565,7 +566,8 @@ padding-bottom: 4rem;
     min-width: 300px;
     max-height: 100vh;
     border-radius: 10px;
-    background-color: $offwhite;
+    background-color: #f4f4f4;
+    
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -598,6 +600,9 @@ padding-bottom: 4rem;
     background-image: radial-gradient(circle, #06060f, #08070e, #09090d, #0b0b0d, #0c0c0c);
     .padding {
       padding: 0 15px 0 15px;
+    }
+    .highlightY {
+      color: #fff;
     }
   
     .contactFlex {
@@ -639,11 +644,12 @@ padding-bottom: 4rem;
     .form {
       width: 90%;
       margin: 0 auto;
-      padding-left: 15px;
-      padding-right: 15px;
+      
   
       @include tabletL {
         margin: 0 2rem 0 2rem;
+        padding-left: 15px;
+      padding-right: 15px;
       }
   
       @include desktop {
@@ -673,13 +679,13 @@ padding-bottom: 4rem;
     }
   
     #button {
-      background: $hotblue;
+      background: $hmmy;
       border: none;
       border-radius: 20px;
       font-weight: bold;
       letter-spacing: 0.1rem;
   
-      color: #f2f2f2;
+      color: #000;
       margin-bottom: 0;
       font-size: 1.6rem;
       cursor: pointer;
@@ -702,7 +708,7 @@ padding-bottom: 4rem;
       margin-bottom: 5%;
       font-size: 1.2rem;
       border-radius: 10px;
-      min-height: 5rem;
+      min-height: 10rem;
       padding: 5px;
       font-family: "montserrat";
       margin-top: 2%;
@@ -748,14 +754,35 @@ footer {
   margin-bottom: 2rem;
   height: 2rem;
   border-radius: 20px;
-  color: white;
-  background-color: #3c56ee;
+  color: black;
+  background-color: $hmmy;
   border-color: transparent;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
   font-size: 1.2rem;
 }
 
-.snipcart-add-item:hover {
+.snipcart-add-item:hover, .bStyle:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px 0 #4886d9 inset, 0 0 10px 4px #4886d9;
+  box-shadow: 0 0 10px 0 $hmmy inset, 0 0 10px 4px $hmmy;
+}
+
+
+//////
+.bStyle {
+  
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  height: 2rem;
+  border-radius: 20px;
+  color: black;
+  background-color: $hmmy;
+  border-color: transparent;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+}
+
+#cButton {
+  margin: 0 auto;
+  font-weight: bold;
 }
